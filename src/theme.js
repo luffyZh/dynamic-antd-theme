@@ -654,16 +654,31 @@ module.exports = `
   .ant-progress-bg {
     background-color: var(--primary-color);
   }
+  .ant-slider {
+    width: 100%;
+  }
+  .ant-slider-track {
+    background-color: var(--primary-hover-color);
+  }
   .ant-slider-handle {
-    border-color: 2px solid var(--primary-hover-color);
+    border: solid 2px var(--primary-hover-color);
   }
   .ant-slider-handle:focus {
-    border-color: var(--primary-color);
-    -webkit-box-shadow: 0 0 0 5px var(--primary-shadow-color);
-            box-shadow: 0 0 0 5px var(--primary-shadow-color);
+    border-color: var(--primary-hover-color);
+    box-shadow: 0 0 0 5px var(--primary-shadow-color);
+    outline: none;
   }
   .ant-slider-handle.ant-tooltip-open {
     border-color: var(--primary-color);
+  }
+  .ant-slider:hover .ant-slider-track {
+    background-color: var(--primary-hover-color);
+  }
+  .ant-slider:hover .ant-slider-handle:not(.ant-tooltip-open) {
+    border-color: var(--primary-hover-color);
+  }
+  .ant-slider-dot-active {
+    border-color: var(--primary-active-color);
   }
   .ant-steps-item-icon > .ant-steps-icon {
     color: var(--primary-color);
