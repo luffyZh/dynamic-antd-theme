@@ -2,6 +2,11 @@
 
 Dynamic change ant-design theme by simpley method.
 
+## Install
+
+`npm install dynamic-antd-theme` or `yarn add dynamic-antd-theme`
+
+
 ## How to use
 
 The best usage of the dynamic-antd-theme is in the common compnent (Layout/Header etc...) of your application.
