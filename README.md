@@ -1,6 +1,8 @@
 # dynamic-antd-theme
 
-Dynamic change ant-design theme by simpley method.
+Dynamic change [Ant-Design](https://ant.design) theme by simpley method.
+
+Go to the [README_zh_CN](./README_zh_CN.md)
 
 ## Install
 
@@ -43,3 +45,15 @@ import DynamicAntdTheme from 'dynamic-antd-theme';
 | primaryColor   | String | #1890d5 |  your antd initial primary color      |
 | storageName   | String |   custom-antd-primary-color  | the name that is saved in the localStorage    |
 | style   | Object |  { display: 'inline-block' }  | you can custom the component style simply  |
+
+## Attention⚠️
+
+**This solution is easy to use, so it is prone to problems. We hope you can give us timely feedback. For example, if there is a problem with any component, we will fix the updated version as soon as possible.**
+
+ - The current version requires your antd version to be lower than v3.19.0
+ - ...Plugin versions are updated from time to time based on antd (new antd components are updated)
+
+## Update Records
+
+ - v0.1.3
+    Fix the Slider Component
