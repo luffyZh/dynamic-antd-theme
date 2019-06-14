@@ -56,4 +56,5 @@ import DynamicAntdTheme from 'dynamic-antd-theme';
 ## Update Records
 
  - v0.1.3
+    
     Fix the Slider Component

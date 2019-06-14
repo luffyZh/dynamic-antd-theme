@@ -58,4 +58,5 @@ import DynamicAntdTheme from 'dynamic-antd-theme';
 ## 更新记录
 
   - v0.1.3
+    
     修复Slider组件的显示问题
