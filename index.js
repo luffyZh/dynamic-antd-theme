@@ -29,6 +29,7 @@ export default class index extends Component {
     const storageColor = window.localStorage.getItem(this.props.storageName);
     if (storageColor) {
       changeAntdTheme(getThemeColor(storageColor));
+      document.getElementById('change_antd_theme').style.backgroundColor = storageColor;
     }
   }
 
@@ -81,7 +82,7 @@ export default class index extends Component {
     return (
       <div style={this.props.style}>
         <div style={ styles.swatch } onClick={ this.handleClick }>
-          <div style={ styles.color } />
+          <div id='change_antd_theme' style={ styles.color } />
         </div>
         {
           this.state.displayColorPicker
