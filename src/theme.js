@@ -654,8 +654,11 @@ module.exports = `
   .ant-progress-bg {
     background-color: var(--primary-color);
   }
+  .ant-slider-handle {
+    border-color: 2px solid var(--primary-hover-color);
+  }
   .ant-slider-handle:focus {
-    border-color: #46a6ff;
+    border-color: var(--primary-color);
     -webkit-box-shadow: 0 0 0 5px var(--primary-shadow-color);
             box-shadow: 0 0 0 5px var(--primary-shadow-color);
   }
