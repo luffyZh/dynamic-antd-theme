@@ -2,6 +2,8 @@
 
 [Ant-Design](https://ant.design) 最简单的动态换肤方案.
 
+[![Deploy Status](https://circleci.com/gh/zeit/now-desktop.svg?style=shield)](https://dynamic-antd-theme.luffyzh.now.sh/)
+
 ## 安装
 
 `npm install dynamic-antd-theme` 或 `yarn add dynamic-antd-theme`

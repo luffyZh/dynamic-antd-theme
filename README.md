@@ -4,6 +4,8 @@ Dynamic change [Ant-Design](https://ant.design) theme by simpley method.
 
 Go to the [README_zh_CN](./README_zh_CN.md)
 
+[![Deploy Status](https://circleci.com/gh/zeit/now-desktop.svg?style=shield)](https://dynamic-antd-theme.luffyzh.now.sh/)
+
 ## Install
 
 `npm install dynamic-antd-theme` or `yarn add dynamic-antd-theme`
