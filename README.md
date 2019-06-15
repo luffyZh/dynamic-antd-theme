@@ -59,4 +59,8 @@ import DynamicAntdTheme from 'dynamic-antd-theme';
 
  - v0.1.3
     
-    Fix the Slider Component
+    Fix the Slider Component.
+ 
+ - v0.1.4
+    
+    Fix repeat insert `<style>` tag.

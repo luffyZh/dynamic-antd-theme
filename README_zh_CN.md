@@ -61,4 +61,8 @@ import DynamicAntdTheme from 'dynamic-antd-theme';
 
   - v0.1.3
     
-    修复Slider组件的显示问题
+    修复Slider组件的显示问题。
+   
+  - v0.1.4
+    
+    避免重复插入`<style>`标签的问题
