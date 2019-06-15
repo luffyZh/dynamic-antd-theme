@@ -74,7 +74,14 @@ export function changeAntdTheme (colorObj) {
       --primary-shadow-color: ${shadowColor};
     }
   `;
-  const styleNode = document.createElement('style');
-  styleNode.innerHTML = `${cssVar}\n${cssContent}`;
-  document.getElementsByTagName('head')[0].appendChild(styleNode);
+  let styleNode = document.getElementById('dynamic_antd_theme_custom_style');
+  if (!styleNode) {
+    // avoid repeat insertion
+    styleNode = document.createElement('style');
+    styleNode.id = 'dynamic_antd_theme_custom_style';
+    styleNode.innerHTML = `${cssVar}\n${cssContent}`;
+    document.getElementsByTagName('head')[0].appendChild(styleNode);
+  } else {
+    styleNode.innerHTML = `${cssVar}\n${cssContent}`;
+  }
 }
