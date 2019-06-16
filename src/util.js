@@ -85,3 +85,56 @@ export function changeAntdTheme (colorObj) {
     styleNode.innerHTML = `${cssVar}\n${cssContent}`;
   }
 }
+
+export function placementSketchPicker(placement) {
+  switch (placement) {
+    case 'bottomRight': {
+      return {
+        marginLeft: '0px'
+      };
+    }
+    case 'bottom': {
+      return {
+        marginLeft: '-87px'
+      };
+    }
+    case 'bottomLeft': {
+      return {
+        marginLeft: '-174px'
+      };
+    }
+    case 'right': {
+      return {
+        marginLeft: '56px',
+        marginTop: '-129px'
+      };
+    }
+    case 'topRight': {
+      return {
+        marginTop: '-342px'
+      }
+    }
+    case 'top': {
+      return {
+        marginLeft: '-87px',
+        marginTop: '-342px'
+      }
+    }
+    case 'topLeft': {
+      return {
+        marginLeft: '-174px',
+        marginTop: '-342px'
+      }
+    }
+    case 'left': {
+      return {
+        marginLeft: '-230px',
+        marginTop: '-129px'
+      }
+    }
+    default:
+      return {
+        marginLeft: '0px'
+      };
+  }
+}
