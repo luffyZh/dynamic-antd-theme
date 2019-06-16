@@ -49,6 +49,7 @@ import DynamicAntdTheme from 'dynamic-antd-theme';
 | primaryColor   | String | #1890d5 |  你当前项目用到的@primary，默认是antd官方的      |
 | storageName   | String |   custom-antd-primary-color  | 换存在本地localStorage里面的变量名    |
 | style   | Object |  { display: 'inline-block' }  | 可以简单的对组件进行样式设置  |
+| placement   | String | bottomRight |  改变color-picker的显示位置，有如下值可设置：`bottom, bottomRight, right, topRight, top, topLeft, left, bottomLeft`。|
 
 ## 注意⚠️
 
@@ -66,3 +67,7 @@ import DynamicAntdTheme from 'dynamic-antd-theme';
   - v0.1.4
     
     避免重复插入`<style>`标签的问题
+
+  - v0.1.5
+  
+    增加`placement`属性，该属性可设置如下值：`bottom, bottomRight, right, topRight, top, topLeft, left, bottomLeft`， 默认值是`bottomRight`。

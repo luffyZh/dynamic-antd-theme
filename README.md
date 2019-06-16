@@ -42,11 +42,12 @@ import DynamicAntdTheme from 'dynamic-antd-theme';
 
 ## Props
 
-| Props       | Type   | default                  | Description         |
+| Props       | Type   | Default                  | Description         |
 | ---------- | ------ | --------------------- | ------------ |
 | primaryColor   | String | #1890d5 |  your antd initial primary color      |
 | storageName   | String |   custom-antd-primary-color  | the name that is saved in the localStorage    |
 | style   | Object |  { display: 'inline-block' }  | you can custom the component style simply  |
+| placement   | String | bottomRight |  change the color-picker position, `bottom, bottomRight, right, topRight, top, topLeft, left, bottomLeft`|
 
 ## Attention⚠️
 
@@ -64,3 +65,7 @@ import DynamicAntdTheme from 'dynamic-antd-theme';
  - v0.1.4
     
     Fix repeat insert `<style>` tag.
+  
+ - v0.1.5
+  
+    Add placement props, `bottom, bottomRight, right, topRight, top, topLeft, left, bottomLeft`. Default is `bottomRight`.
