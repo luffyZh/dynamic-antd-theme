@@ -4,12 +4,12 @@
 
 [![Deploy Status](https://circleci.com/gh/zeit/now-desktop.svg?style=shield)](https://dynamic-antd-theme.luffyzh.now.sh/)
 
-## 📦安装
+## 📦 安装
 
 `npm install dynamic-antd-theme` 或 `yarn add dynamic-antd-theme`
 
 
-## 🔨如何使用
+## 🔨 如何使用
 
 最好的方式是将组件安装在公用组件里，这样任何页面都可以使用，进行替换。
 
@@ -42,7 +42,7 @@ import DynamicAntdTheme from 'dynamic-antd-theme';
 
 ```
 
-## ✨属性
+## ✨ 属性
 
 | 属性       | 类型  |  默认值                  | 描述         |
 | ---------- | ------ | --------------------- | ------------ |
@@ -51,14 +51,14 @@ import DynamicAntdTheme from 'dynamic-antd-theme';
 | style   | Object |  { display: 'inline-block' }  | 可以简单的对组件进行样式设置  |
 | placement   | String | bottomRight |  改变color-picker的显示位置，有如下值可设置：`bottom, bottomRight, right, topRight, top, topLeft, left, bottomLeft`。|
 
-## ⚠️注意
+## ⚠️ 注意
 
 **该方案因为简易使用，所以容易出现问题，出现问题希望大家及时反馈，比如什么组件有问题，一定尽快修复更新版本。**
 
  - 目前版本要求你的antd版本低于v3.19.0
  - ...插件版本会根据antd不定时更新（一般antd出新组件会进行更新）
 
-## 🔗更新记录
+## 🔗 更新记录
 
   - v0.1.3
     
