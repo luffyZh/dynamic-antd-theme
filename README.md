@@ -6,12 +6,12 @@ English | [简体中文](./README_zh_CN.md)
 
 [![Deploy Status](https://circleci.com/gh/zeit/now-desktop.svg?style=shield)](https://dynamic-antd-theme.luffyzh.now.sh/)
 
-## 📦Install
+## 📦 Install
 
 `npm install dynamic-antd-theme` or `yarn add dynamic-antd-theme`
 
 
-## 🔨Usage
+## 🔨 Usage
 
 The best usage of the dynamic-antd-theme is in the common compnent (Layout/Header etc...) of your application.
 
@@ -40,7 +40,7 @@ import DynamicAntdTheme from 'dynamic-antd-theme';
 
 ```
 
-## ✨Props
+## ✨ Props
 
 | Props       | Type   | Default                  | Description         |
 | ---------- | ------ | --------------------- | ------------ |
@@ -49,14 +49,14 @@ import DynamicAntdTheme from 'dynamic-antd-theme';
 | style   | Object |  { display: 'inline-block' }  | you can custom the component style simply  |
 | placement   | String | bottomRight |  change the color-picker position, `bottom, bottomRight, right, topRight, top, topLeft, left, bottomLeft`|
 
-## ⚠️Attention
+## ⚠️ Attention
 
 **This solution is easy to use, so it is prone to problems. We hope you can give us timely feedback. For example, if there is a problem with any component, we will fix the updated version as soon as possible.**
 
  - The current version requires your antd version to be lower than v3.19.0
  - ...Plugin versions are updated from time to time based on antd (new antd components are updated)
 
-## 🔗Changelogs
+## 🔗 Changelogs
 
  - v0.1.3
     
