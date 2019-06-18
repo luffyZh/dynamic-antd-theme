@@ -9,13 +9,15 @@ export default class index extends Component {
     primaryColor: PropTypes.string,
     storageName: PropTypes.string,
     style: PropTypes.object,
-    placement: PropTypes.object
+    placement: PropTypes.object,
+    themeChangeCallback: PropTypes.func
   }
   static defaultProps = {
     primaryColor: '#1890ff',
     storageName: 'custom-antd-primary-color',
     style: { display: 'inline-block' },
-    placement: null
+    placement: null,
+    themeChangeCallback: null
   }
 
   constructor(props) {
@@ -27,12 +29,15 @@ export default class index extends Component {
   }
 
   componentDidMount() {
-    const { storageName } = this.props;
+    const { storageName, themeChangeCallback } = this.props;
     // initial storage color
     const storageColor = window.localStorage.getItem(storageName);
     if (storageColor) {
       changeAntdTheme(getThemeColor(storageColor));
       document.getElementById('change_antd_theme_color').style.backgroundColor = storageColor;
+      if (themeChangeCallback) {
+        themeChangeCallback(storageColor);
+      }
     }
   }
 
@@ -48,6 +53,7 @@ export default class index extends Component {
     this.setState({ color: color.rgb }, () => {
       changeAntdTheme(getThemeColor(color.hex));
       window.localStorage.setItem(this.props.storageName, color.hex);
+      this.props.themeChangeCallback && this.props.themeChangeCallback(color.hex);
     });
   };
 
