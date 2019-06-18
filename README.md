@@ -37,6 +37,11 @@ import DynamicAntdTheme from 'dynamic-antd-theme';
 
 <DynamicAntdTheme style={{ display: 'margin: 10px' }} />
 
+function themeChangeCallback (color) {
+  document.getElementById('my-header-bar').style.backgroundColor = color;
+}
+
+<DynamicAntdTheme themeChangeCallback={this.themeChangeCallback} />
 
 ```
 
@@ -46,8 +51,9 @@ import DynamicAntdTheme from 'dynamic-antd-theme';
 | ---------- | ------ | --------------------- | ------------ |
 | primaryColor   | String | #1890d5 |  your antd initial primary color      |
 | storageName   | String |   custom-antd-primary-color  | the name that is saved in the localStorage    |
-| style   | Object |  { display: 'inline-block' }  | you can custom the component style simply  |
+| style   | Object |  null  | you can custom the component style simply  |
 | placement   | String | bottomRight |  change the color-picker position, `bottom, bottomRight, right, topRight, top, topLeft, left, bottomLeft`|
+| themeChangeCallback   | Func | null | you can do something use themeColor when themeColor changed. |
 
 ## ⚠️ Attention
 
@@ -69,3 +75,7 @@ import DynamicAntdTheme from 'dynamic-antd-theme';
  - v0.1.5
   
     Add placement props, `bottom, bottomRight, right, topRight, top, topLeft, left, bottomLeft`. Default is `bottomRight`.
+  
+ - v0.1.6
+  
+    Add themeChangeCallback props, you can do something use themeColor when themeColor changed.
