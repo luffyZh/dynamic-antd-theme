@@ -51,8 +51,8 @@ function themeChangeCallback (color) {
 
 | 属性       | 类型  |  默认值                  | 描述         |
 | ---------- | ------ | --------------------- | ------------ |
-| primaryColor   | String | #1890d5 |  你当前项目用到的@primary，默认是antd官方的      |
-| storageName   | String |   custom-antd-primary-color  | 换存在本地localStorage里面的变量名    |
+| primaryColor   | String | #1890d5 |  你当前项目用到的@primary-color，默认是antd官方的      |
+| storageName   | String |   custom-antd-primary-color  | 缓存在本地localStorage里面的变量名    |
 | style   | Object |  { display: 'inline-block' }  | 可以简单的对组件进行样式设置  |
 | placement   | String | bottomRight |  改变color-picker的显示位置，有如下值可设置：`bottom, bottomRight, right, topRight, top, topLeft, left, bottomLeft`。|
 | themeChangeCallback   | Func | null | 你可以在主题颜色变化的同时传入一个你想修改的自定义callback，用来修改你自己的与主题相关的样式，如Header/Sider这种antd不附带主题色的场景 |

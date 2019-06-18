@@ -49,7 +49,7 @@ function themeChangeCallback (color) {
 
 | Props       | Type   | Default                  | Description         |
 | ---------- | ------ | --------------------- | ------------ |
-| primaryColor   | String | #1890d5 |  your antd initial primary color      |
+| primaryColor   | String | #1890d5 |  your antd initial @primary-color      |
 | storageName   | String |   custom-antd-primary-color  | the name that is saved in the localStorage    |
 | style   | Object |  null  | you can custom the component style simply  |
 | placement   | String | bottomRight |  change the color-picker position, `bottom, bottomRight, right, topRight, top, topLeft, left, bottomLeft`|
