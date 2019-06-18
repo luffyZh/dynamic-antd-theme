@@ -14,7 +14,8 @@
   "keywords": [
     "react",
     "antd",
-    "theme"
+    "dynamic-theme",
+    "css"
   ],
   "devDependencies": {
     "antd": "^3.19.3",

@@ -5,6 +5,7 @@ import tinycolor from 'tinycolor2';
 import { getThemeColor, changeAntdTheme, placementSketchPicker } from './src/util';
 
 export default class index extends Component {
+  
   static propTypes = {
     primaryColor: PropTypes.string,
     storageName: PropTypes.string,
@@ -12,6 +13,7 @@ export default class index extends Component {
     placement: PropTypes.object,
     themeChangeCallback: PropTypes.func
   }
+
   static defaultProps = {
     primaryColor: '#1890ff',
     storageName: 'custom-antd-primary-color',
