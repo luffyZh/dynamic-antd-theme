@@ -78,11 +78,18 @@ html {
 .ant-select-dropdown.ant-select-dropdown--multiple .ant-select-dropdown-menu-item-selected:hover .ant-select-selected-icon {
   color: var(--primary-color);
 }
+.ant-select-dropdown-menu-item:hover:not(.ant-select-dropdown-menu-item-disabled) {
+  background-color: var(--primary-shadow-color);
+}
+.ant-select-dropdown-menu-item-active:not(.ant-select-dropdown-menu-item-disabled) {
+  background-color: var(--primary-shadow-color);
+}
 .ant-input:hover {
   border-color: var(--primary-hover-color);
 }
 .ant-input:focus {
   border-color: var(--primary-hover-color);
+  box-shadow: var(--primary-shadow-color);
 }
 .ant-input-group-addon .ant-select-open .ant-select-selection,
 .ant-input-group-addon .ant-select-focused .ant-select-selection {
@@ -433,6 +440,9 @@ html {
 }
 .ant-checkbox-indeterminate .ant-checkbox-inner::after {
   background-color: var(--primary-color);
+}
+.ant-calendar-selected-day .ant-calendar-date {
+  background: var(--primary-shadow-color);
 }
 .ant-calendar-picker:hover .ant-calendar-picker-input:not(.ant-input-disabled) {
   border-color: var(--primary-color);
