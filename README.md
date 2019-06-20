@@ -79,3 +79,7 @@ function themeChangeCallback (color) {
  - v0.1.6
   
     Add themeChangeCallback props, you can do something use themeColor when themeColor changed.
+  
+ - v0.2.0
+
+    Fix ant-design table tr background when cursor hovered.

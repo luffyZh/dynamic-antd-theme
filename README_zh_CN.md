@@ -81,3 +81,7 @@ function themeChangeCallback (color) {
   - v0.1.6
   
     增加 `themeChangeCallback` 属性, 你可以传入一个回调函数(参数是修改后的主题色)，当主题色变化的时候使用主题色做一些事。
+  
+  - v0.2.0
+
+    修复ant-design的Table组件，鼠标hover的时候背景色没跟随主题变化

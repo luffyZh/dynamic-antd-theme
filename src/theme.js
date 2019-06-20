@@ -749,6 +749,12 @@ module.exports = `
   .ant-table-filter-dropdown-link:active {
     color: var(--primary-active-color);
   }
+  .ant-table-thead > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td,
+  .ant-table-tbody > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td,
+  .ant-table-thead > tr:hover:not(.ant-table-expanded-row) > td,
+  .ant-table-tbody > tr:hover:not(.ant-table-expanded-row) > td {
+    background: var(--primary-shadow-color);
+  }
   .ant-timeline-item-head-blue {
     color: var(--primary-color);
     border-color: var(--primary-color);
