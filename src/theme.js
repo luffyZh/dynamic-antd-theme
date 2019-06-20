@@ -207,6 +207,9 @@ module.exports = `
   .ant-menu-item-selected > a:hover {
     color: var(--primary-color);
   }
+  .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: var(--primary-shadow-color);
+  }
   .ant-menu-submenu-vertical > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::after,
   .ant-menu-submenu-vertical-left > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::after,
   .ant-menu-submenu-vertical-right > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::after,
@@ -261,11 +264,19 @@ module.exports = `
   .ant-dropdown-menu-item-selected > a,
   .ant-dropdown-menu-submenu-title-selected > a {
     color: var(--primary-color);
+    background-color: var(--primary-shadow-color);
+  }
+  .ant-dropdown-menu-item:hover,
+  .ant-dropdown-menu-submenu-title:hover {
+    background-color: var(--primary-shadow-color);
   }
   .ant-dropdown-menu-dark .ant-dropdown-menu-item-selected,
   .ant-dropdown-menu-dark .ant-dropdown-menu-item-selected:hover,
   .ant-dropdown-menu-dark .ant-dropdown-menu-item-selected > a {
     background: var(--primary-color);
+  }
+  .ant-fullcalendar-value:hover {
+    background: var(--primary-shadow-color);
   }
   .ant-fullcalendar-value:active {
     background: var(--primary-color);
@@ -279,6 +290,14 @@ module.exports = `
   .ant-fullcalendar-month-panel-selected-cell .ant-fullcalendar-value {
     background: var(--primary-color);
   }
+  .ant-fullcalendar-fullscreen .ant-fullcalendar-month:hover,
+  .ant-fullcalendar-fullscreen .ant-fullcalendar-date:hover {
+    background: var(--primary-shadow-color);
+  }
+  .ant-fullcalendar-fullscreen .ant-fullcalendar-month:active,
+  .ant-fullcalendar-fullscreen .ant-fullcalendar-date:active {
+    background: var(--primary-shadow-color);
+  }
   .ant-fullcalendar-fullscreen .ant-fullcalendar-month-panel-current-cell .ant-fullcalendar-month,
   .ant-fullcalendar-fullscreen .ant-fullcalendar-today .ant-fullcalendar-date {
     border-top-color: var(--primary-color);
@@ -286,6 +305,10 @@ module.exports = `
   .ant-fullcalendar-fullscreen .ant-fullcalendar-month-panel-selected-cell .ant-fullcalendar-value,
   .ant-fullcalendar-fullscreen .ant-fullcalendar-selected-day .ant-fullcalendar-value {
     color: var(--primary-color);
+  }
+  .ant-fullcalendar-fullscreen .ant-fullcalendar-month-panel-selected-cell .ant-fullcalendar-month,
+  .ant-fullcalendar-fullscreen .ant-fullcalendar-selected-day .ant-fullcalendar-date {
+    background: var(--primary-shadow-color);
   }
   .ant-radio-wrapper:hover .ant-radio,
   .ant-radio:hover .ant-radio-inner,
@@ -387,6 +410,9 @@ module.exports = `
   .ant-cascader-picker-label:hover + .ant-cascader-input {
     border-color: var(--primary-hover-color);
   }
+  .ant-cascader-menu-item:hover {
+    background: var(--primary-shadow-color);
+  }
   .ant-checkbox-wrapper:hover .ant-checkbox-inner,
   .ant-checkbox:hover .ant-checkbox-inner,
   .ant-checkbox-input:focus + .ant-checkbox-inner {
@@ -412,6 +438,9 @@ module.exports = `
   }
   .ant-calendar-header a:hover {
     color: var(--primary-hover-color);
+  }
+  .ant-calendar-date:hover {
+    background: var(--primary-shadow-color);
   }
   .ant-calendar-date:active {
     background: var(--primary-hover-color);
@@ -481,6 +510,27 @@ module.exports = `
   .ant-calendar-decade-panel-selected-cell .ant-calendar-decade-panel-decade:hover {
     background: var(--primary-color);
   }
+  .ant-calendar-range .ant-calendar-in-range-cell::before {
+    background: var(--primary-shadow-color);
+  }
+  .ant-calendar-time-picker-select li:hover {
+    background: var(--primary-shadow-color);
+  }
+  .ant-calendar-month-panel-month:hover {
+    background: var(--primary-shadow-color);
+  }
+  .ant-calendar-year-panel-year:hover {
+    background: var(--primary-shadow-color);
+  }
+  .ant-calendar-decade-panel-decade:hover {
+    background: var(--primary-shadow-color);
+  }
+  .ant-calendar-week-number .ant-calendar-body tr:hover {
+    background: var(--primary-shadow-color);
+  }
+  .ant-calendar-week-number .ant-calendar-body tr.ant-calendar-active-week {
+    background: var(--primary-shadow-color);
+  }
   .ant-time-picker-input:hover {
     border-color: var(--primary-hover-color);
   }
@@ -488,6 +538,9 @@ module.exports = `
     border-color: var(--primary-hover-color);
     -webkit-box-shadow: 0 0 0 2px var(--primary-shadow-color);
             box-shadow: 0 0 0 2px var(--primary-shadow-color);
+  }
+  .ant-time-picker-panel-select li:hover {
+    background: var(--primary-shadow-color);
   }
   .ant-tag-checkable:not(.ant-tag-checkable-checked):hover {
     color: var(--primary-color);
@@ -500,13 +553,14 @@ module.exports = `
   }
   .ant-tag-blue {
     color: var(--primary-color);
-    background: #e6f7ff;
-    border-color: #91d5ff;
   }
   .ant-tag-blue-inverse {
     color: #fff;
     background: var(--primary-color);
     border-color: var(--primary-color);
+  }
+  .ant-transfer-list-content-item:not(.ant-transfer-list-content-item-disabled):hover {
+    background-color: var(--primary-shadow-color);
   }
   .has-error .ant-transfer-list-search:not([disabled]):hover {
     border-color: var(--primary-hover-color);
@@ -626,6 +680,19 @@ module.exports = `
     border-color: var(--primary-hover-color);
     -webkit-box-shadow: 0 0 0 2px var(--primary-shadow-color);
             box-shadow: 0 0 0 2px var(--primary-shadow-color);
+  }
+  .ant-mention-dropdown-item:hover {
+    background-color: var(--primary-shadow-color);
+  }
+  .ant-mention-dropdown-item.focus,
+  .ant-mention-dropdown-item-active {
+    background-color: var(--primary-shadow-color);
+  }
+  .ant-mentions-dropdown-menu-item:hover {
+    background-color: var(--primary-shadow-color);
+  }
+  .ant-mentions-dropdown-menu-item-active {
+    background-color: var(--primary-shadow-color);
   }
   .ant-message-info .anticon,
   .ant-message-loading .anticon {
@@ -781,6 +848,12 @@ module.exports = `
   .ant-select-tree li span.ant-select-tree-switcher.ant-select-tree-switcher_close .ant-select-switcher-loading-icon {
     color: var(--primary-color);
   }
+  .ant-select-tree li .ant-select-tree-node-content-wrapper:hover {
+    background-color: var(--primary-shadow-color);
+  }
+  .ant-select-tree li .ant-select-tree-node-content-wrapper.ant-select-tree-node-selected {
+    background-color: var(--primary-shadow-color);
+  }
   .ant-tree.ant-tree-directory > li.ant-tree-treenode-selected > span.ant-tree-checkbox .ant-tree-checkbox-inner,
   .ant-tree.ant-tree-directory .ant-tree-child-tree > li.ant-tree-treenode-selected > span.ant-tree-checkbox .ant-tree-checkbox-inner {
     border-color: var(--primary-color);
@@ -820,6 +893,16 @@ module.exports = `
   .ant-tree li.ant-tree-treenode-loading span.ant-tree-switcher.ant-tree-switcher_open .ant-tree-switcher-loading-icon,
   .ant-tree li.ant-tree-treenode-loading span.ant-tree-switcher.ant-tree-switcher_close .ant-tree-switcher-loading-icon {
     color: var(--primary-color);
+  }
+  .ant-tree.ant-tree-directory > li span.ant-tree-node-content-wrapper:hover::before,
+  .ant-tree.ant-tree-directory .ant-tree-child-tree > li span.ant-tree-node-content-wrapper:hover::before {
+    background: var(--primary-shadow-color);
+  }
+  .ant-tree li .ant-tree-node-content-wrapper:hover {
+    background-color: var(--primary-shadow-color);
+  }
+  .ant-tree li .ant-tree-node-content-wrapper.ant-tree-node-selected {
+    background-color: var(--primary-shadow-color);
   }
   .ant-typography a {
     color: var(--primary-color);
