@@ -55,6 +55,12 @@ function themeChangeCallback (color) {
 | placement   | String | bottomRight |  change the color-picker position, `bottom, bottomRight, right, topRight, top, topLeft, left, bottomLeft`|
 | themeChangeCallback   | Func | null | you can do something use themeColor when themeColor changed. |
 
+## 🌍 Browser Support
+
+- Chrome 39+
+- Firefox 30+
+- Safari 9.1+
+
 ## ⚠️ Attention
 
 **This solution is easy to use, so it is prone to problems. We hope you can give us timely feedback. For example, if there is a problem with any component, we will fix the updated version as soon as possible.**
