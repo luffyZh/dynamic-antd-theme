@@ -6,6 +6,12 @@ English | [简体中文](./README_zh_CN.md)
 
 [![Deploy Status](https://circleci.com/gh/zeit/now-desktop.svg?style=shield)](https://dynamic-antd-theme.luffyzh.now.sh/)
 
+## 🌍 Browser Support
+
+| ![Chrome](https://raw.github.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png) | ![Edge](https://raw.github.com/alrra/browser-logos/master/src/edge/edge_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/src/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/src/safari/safari_48x48.png) |
+| --- | --- | --- | --- | --- | --- |
+| Chrome 39.0+ ✔ | Edge 12.0+ ✔ | Firefox 30.0+ ✔ | IE 11+ ✔ | Safari 9.1+ ✔ |
+
 ## 📦 Install
 
 `npm install dynamic-antd-theme` or `yarn add dynamic-antd-theme`
@@ -54,13 +60,6 @@ function themeChangeCallback (color) {
 | style   | Object |  null  | you can custom the component style simply  |
 | placement   | String | bottomRight |  change the color-picker position, `bottom, bottomRight, right, topRight, top, topLeft, left, bottomLeft`|
 | themeChangeCallback   | Func | null | you can do something use themeColor when themeColor changed. |
-
-## 🌍 Browser Support
-
-- Chrome 39+
-- Firefox 30+
-- Safari 9.1+
-- IE 11+
 
 ## ⚠️ Attention
 

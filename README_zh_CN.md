@@ -4,6 +4,12 @@
 
 [![Deploy Status](https://circleci.com/gh/zeit/now-desktop.svg?style=shield)](https://dynamic-antd-theme.luffyzh.now.sh/)
 
+## 🌍 Browser Support
+
+| ![Chrome](https://raw.github.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png) | ![Edge](https://raw.github.com/alrra/browser-logos/master/src/edge/edge_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/src/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/src/safari/safari_48x48.png) |
+| --- | --- | --- | --- | --- | --- |
+| Chrome 39.0+ ✔ | Edge 12.0+ ✔ | Firefox 30.0+ ✔ | IE 11+ ✔ | Safari 9.1+ ✔ |
+
 ## 📦 安装
 
 `npm install dynamic-antd-theme` 或 `yarn add dynamic-antd-theme`
@@ -56,15 +62,6 @@ function themeChangeCallback (color) {
 | style   | Object |  { display: 'inline-block' }  | 可以简单的对组件进行样式设置  |
 | placement   | String | bottomRight |  改变color-picker的显示位置，有如下值可设置：`bottom, bottomRight, right, topRight, top, topLeft, left, bottomLeft`。|
 | themeChangeCallback   | Func | null | 你可以在主题颜色变化的同时传入一个你想修改的自定义callback，用来修改你自己的与主题相关的样式，如Header/Sider这种antd不附带主题色的场景 |
-
-## 🌍 浏览器支持
-
-- Chrome 39+
-- Firefox 30+
-- Safari 9.1+
-- IE 11+
-  
-> 对于不兼容的浏览器，大部分原因可能是不兼容CSS3变量特性，一般不支持CSS3新属性的浏览器慢慢就被摒弃掉了，如果是在想解决，就按照思路使用正则进行变量全局替换也是可行方案。具体交流可加交流群私聊。QQ: 641113448
 
 ## ⚠️ 注意
 
