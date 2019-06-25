@@ -60,6 +60,7 @@ function themeChangeCallback (color) {
 - Chrome 39+
 - Firefox 30+
 - Safari 9.1+
+- IE 11+
 
 ## ⚠️ Attention
 
@@ -89,3 +90,7 @@ function themeChangeCallback (color) {
  - v0.2.0
 
     Fix ant-design table tr background when cursor hovered.
+  
+ - v0.2.4
+
+    Support IE 11+.

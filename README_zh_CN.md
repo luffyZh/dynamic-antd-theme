@@ -62,6 +62,7 @@ function themeChangeCallback (color) {
 - Chrome 39+
 - Firefox 30+
 - Safari 9.1+
+- IE 11+
   
 > 对于不兼容的浏览器，大部分原因可能是不兼容CSS3变量特性，一般不支持CSS3新属性的浏览器慢慢就被摒弃掉了，如果是在想解决，就按照思路使用正则进行变量全局替换也是可行方案。具体交流可加交流群私聊。QQ: 641113448
 
@@ -93,3 +94,7 @@ function themeChangeCallback (color) {
   - v0.2.0
 
     修复ant-design的Table组件，鼠标hover的时候背景色没跟随主题变化
+
+  - v0.2.4
+  
+    支持IE 11+
