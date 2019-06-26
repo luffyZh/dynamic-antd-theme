@@ -456,7 +456,6 @@ module.exports = `
     background: var(--primary-hover-color);
   }
   .ant-calendar-today .ant-calendar-date {
-    color: var(--primary-color);
     border-color: var(--primary-color);
   }
   .ant-calendar-selected-date .ant-calendar-date,
@@ -560,14 +559,6 @@ module.exports = `
   }
   .ant-tag-checkable:active {
     background-color: var(--primary-active-color);
-  }
-  .ant-tag-blue {
-    color: var(--primary-color);
-  }
-  .ant-tag-blue-inverse {
-    color: #fff;
-    background: var(--primary-color);
-    border-color: var(--primary-color);
   }
   .ant-transfer-list-content-item:not(.ant-transfer-list-content-item-disabled):hover {
     background-color: var(--primary-shadow-color);
