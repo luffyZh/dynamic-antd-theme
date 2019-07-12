@@ -462,6 +462,7 @@ html {
   background: var(--primary-hover-color);
 }
 .ant-calendar-today .ant-calendar-date {
+  color: var(--primary-color);
   border-color: var(--primary-color);
 }
 .ant-calendar-selected-date .ant-calendar-date,
