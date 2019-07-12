@@ -1,6 +1,6 @@
 ![](https://user-gold-cdn.xitu.io/2019/6/17/16b636d99d4e674e?imageView2/1/w/1304/h/734/q/85/interlace/1)
 
-Dynamic change [Ant-Design](https://ant.design) theme by simpley method.
+Dynamic change [Ant-Design](https://ant.design) theme by simply method.
 
 English | [简体中文](./README_zh_CN.md)
 
@@ -93,3 +93,7 @@ function themeChangeCallback (color) {
  - v0.2.4
 
     Support IE 11+.
+  
+ - v0.2.6
+  
+    Fix DatePicker current date color.

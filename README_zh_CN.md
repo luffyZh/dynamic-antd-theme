@@ -95,3 +95,7 @@ function themeChangeCallback (color) {
   - v0.2.4
   
     支持IE 11+
+
+  - v0.2.6
+
+    修复了日期选择控件`<DatePicker />`的当前日期颜色问题。
