@@ -4,7 +4,7 @@ import { SketchPicker } from 'react-color';
 import tinycolor from 'tinycolor2';
 import { getThemeColor, changeAntdTheme, placementSketchPicker } from './src/util';
 
-export default class index extends Component {
+class DynamicAntdTheme extends Component {
   
   static propTypes = {
     primaryColor: PropTypes.string,
@@ -51,7 +51,7 @@ export default class index extends Component {
     this.setState({ displayColorPicker: false });
   };
 
-  handleChange = (color) => {
+  handleChange = color => {
     this.setState({ color: color.rgb }, () => {
       changeAntdTheme(getThemeColor(color.hex));
       window.localStorage.setItem(this.props.storageName, color.hex);
@@ -110,3 +110,5 @@ export default class index extends Component {
     );
   }
 }
+
+export { DynamicAntdTheme as default, getThemeColor, changeAntdTheme }

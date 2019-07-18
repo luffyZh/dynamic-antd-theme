@@ -63,6 +63,30 @@ function themeChangeCallback (color) {
 | placement   | String | bottomRight |  改变color-picker的显示位置，有如下值可设置：`bottom, bottomRight, right, topRight, top, topLeft, left, bottomLeft`。|
 | themeChangeCallback   | Func | null | 你可以在主题颜色变化的同时传入一个你想修改的自定义callback，用来修改你自己的与主题相关的样式，如Header/Sider这种antd不附带主题色的场景 |
 
+## 🌞 方法
+| export       | Description         |
+| ---------- | ------------ |
+| default  | 默认引入的是 <DynamicAntdTheme /> 组件 |
+| getThemeColor   | `param: color`, 根据传入的颜色生成一组颜色对象  |
+| changeAntdTheme   | `param: colorObj`, 改变主题的方法 |
+
+#### 示例
+```
+import { getThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
+...
+
+<Button
+  onClick={
+    () => {
+      const color = 'blue';
+      changeAntdTheme(
+        getThemeColor(color);
+      );
+    }
+  }
+>改变主题</Button>
+```
+
 ## ⚠️ 注意
 
 **该方案因为简易使用，所以容易出现问题，出现问题希望大家及时反馈，比如什么组件有问题，一定尽快修复更新版本。**
@@ -99,3 +123,7 @@ function themeChangeCallback (color) {
   - v0.2.6
 
     修复了日期选择控件`<DatePicker />`的当前日期颜色问题。
+
+  - v0.3.0
+  
+    增加了两个方法`{ getThemeColor, changeAntdTheme }`，为了那些不需要类似颜色选择器这种组件的开发者，开发者可以根据自己的需求来进行颜色的改变。

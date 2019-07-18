@@ -61,6 +61,30 @@ function themeChangeCallback (color) {
 | placement   | String | bottomRight |  change the color-picker position, `bottom, bottomRight, right, topRight, top, topLeft, left, bottomLeft`|
 | themeChangeCallback   | Func | null | you can do something use themeColor when themeColor changed. |
 
+## 🌞 Export
+| export       | Description         |
+| ---------- | ------------ |
+| default  | The <DynamicAntdTheme /> component   |
+| getThemeColor   | `param: color`, generate colorObj based on color  |
+| changeAntdTheme   | `param: colorObj`, change the antd theme |
+
+#### Example
+```
+import { getThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
+...
+
+<Button
+  onClick={
+    () => {
+      const color = 'blue';
+      changeAntdTheme(
+        getThemeColor(color);
+      );
+    }
+  }
+>Change Theme</Button>
+```
+
 ## ⚠️ Attention
 
 **This solution is easy to use, so it is prone to problems. We hope you can give us timely feedback. For example, if there is a problem with any component, we will fix the updated version as soon as possible.**
@@ -97,3 +121,7 @@ function themeChangeCallback (color) {
  - v0.2.6
   
     Fix DatePicker current date color.
+
+ - v0.3.0
+  
+    export `{ getThemeColor, changeAntdTheme }` methods to help the developer who don't need react-colorPicker
