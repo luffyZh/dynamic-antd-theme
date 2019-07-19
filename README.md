@@ -5,6 +5,8 @@ Dynamic change [Ant-Design](https://ant.design) theme by simply method.
 English | [简体中文](./README_zh_CN.md)
 
 [![Deploy Status](https://circleci.com/gh/zeit/now-desktop.svg?style=shield)](https://dynamic-antd-theme.luffyzh.now.sh/)
+## 🏠 HomePage
+[Dynamic-Antd-Theme-Demo](https://dynamic-antd-theme.luffyzh.now.sh/)
 
 ## 🌍 Browser Support
 
