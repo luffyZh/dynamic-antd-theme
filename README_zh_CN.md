@@ -127,3 +127,7 @@ import { getThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
   - v0.3.0
   
     增加了两个方法`{ getThemeColor, changeAntdTheme }`，为了那些不需要类似颜色选择器这种组件的开发者，开发者可以根据自己的需求来进行颜色的改变。
+  
+  - v0.3.2
+  
+    修复了`<Button type='danger' />`的bug, 这个bug导致当鼠标hover到`type='danger'`的按钮时，文字颜色会变成主题色，而不是白色.

@@ -116,6 +116,11 @@ module.exports = `
     background-color: var(--primary-active-color);
     border-color: var(--primary-active-color);
   }
+  .ant-btn-danger:hover, .ant-btn-danger:focus {
+    color: #fff;
+    background-color: #ff7875;
+    border-color: #ff7875;
+  }
   .ant-btn-group .ant-btn-primary:not(:first-child):not(:last-child) {
     border-right-color: var(--primary-hover-color);
     border-left-color: var(--primary-hover-color);

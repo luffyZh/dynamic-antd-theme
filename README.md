@@ -126,4 +126,8 @@ import { getThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
 
  - v0.3.0
   
-    export `{ getThemeColor, changeAntdTheme }` methods to help the developer who don't need react-colorPicker
+    Export `{ getThemeColor, changeAntdTheme }` methods to help the developer who don't need react-colorPicker
+  
+ - v0.3.2
+  
+    Fix `<Button type='danger' />` bug, when hover the font color is primary-color.
