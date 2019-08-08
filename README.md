@@ -92,6 +92,9 @@ import { getThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
 **This solution is easy to use, so it is prone to problems. We hope you can give us timely feedback. For example, if there is a problem with any component, we will fix the updated version as soon as possible.**
 
  - The current version requires your antd version to be lower than v3.19.0
+   
+> The antd version is higher than v3.19.0 you can also use it, if have some problems remember give me an issue. 
+
  - ...Plugin versions are updated from time to time based on antd (new antd components are updated)
 
 ## 🔗 Changelogs
