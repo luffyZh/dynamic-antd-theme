@@ -26,27 +26,27 @@ tinycolor.mix = function(color1, color2, amount) {
   return tinycolor(rgba);
 };
 
-function getHoverColor (color, index = 5) {
+function getHoverColor (color, ratio = 5) {
   return tinycolor.mix(
     '#ffffff',
     color,
-    currentEasing(index) * 100 / primaryEasing
+    currentEasing(ratio) * 100 / primaryEasing
   ).toHexString();
 }
 
-function getActiveColor (color, index = 7) {
+function getActiveColor (color, ratio = 7) {
   return tinycolor.mix(
     '#333333',
     color,
-    (1 - (currentEasing(index) - primaryEasing) / (1 - primaryEasing)) * 100
+    (1 - (currentEasing(ratio) - primaryEasing) / (1 - primaryEasing)) * 100
   ).toHexString();
 }
 
-function getShadowColor (color, index = 9) {
+function getShadowColor (color, ratio = 9) {
   return tinycolor.mix(
     '#888888',
     color,
-    (1 - (currentEasing(index) - primaryEasing) / (1 - primaryEasing)) * 100
+    (1 - (currentEasing(ratio) - primaryEasing) / (1 - primaryEasing)) * 100
   ).setAlpha(.2).toRgbString();
 }
 
