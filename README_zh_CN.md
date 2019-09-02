@@ -1,6 +1,6 @@
 ![](https://user-gold-cdn.xitu.io/2019/6/17/16b636d99d4e674e?imageView2/1/w/1304/h/734/q/85/interlace/1)
 
-[Ant-Design](https://ant.design) 最简单的动态换肤方案。它是一个通用的解决方案，无论你是使用less/scss/css。
+[Ant-Design](https://ant.design) 最简单的动态换肤方案。它是一个通用的解决方案，无论你是使用less还是css。
 
 [![Deploy Status](https://circleci.com/gh/zeit/now-desktop.svg?style=shield)](https://dynamic-antd-theme.luffyzh.now.sh/)
 
