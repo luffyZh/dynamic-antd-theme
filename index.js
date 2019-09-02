@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { SketchPicker } from 'react-color';
-import tinycolor from 'tinycolor2';
+import Color from 'color';
 import { getThemeColor, changeAntdTheme, placementSketchPicker } from './src/util';
 
 class DynamicAntdTheme extends Component {
@@ -26,7 +26,7 @@ class DynamicAntdTheme extends Component {
     super(props);
     const { primaryColor } = this.props;
     this.state = {
-      color: tinycolor(primaryColor).toRgb()
+      color: Color(primaryColor).rgb()
     };
   }
 
@@ -65,7 +65,7 @@ class DynamicAntdTheme extends Component {
         width: '36px',
         height: '14px',
         borderRadius: '2px',
-        background: `rgba(${ this.state.color.r }, ${ this.state.color.g }, ${ this.state.color.b }, ${ this.state.color.a })`
+        background: `rgba(${ this.state.color.color[0] }, ${ this.state.color.color[1] }, ${ this.state.color.color[2] }, ${ this.state.color.valpha })`
       },
       swatch: {
         width: '46px',
