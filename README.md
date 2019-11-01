@@ -134,3 +134,8 @@ import { getThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
  - v0.3.2
   
     Fix `<Button type='danger' />` bug, when hover the font color is primary-color.
+  
+ - v0.3.6
+
+    Fix DateRangePicker some bugs.
+

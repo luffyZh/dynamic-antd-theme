@@ -464,15 +464,25 @@ module.exports = `
     color: var(--primary-color);
     border-color: var(--primary-color);
   }
+  .ant-calendar-range .ant-calendar-selected-start-date .ant-calendar-date,
+  .ant-calendar-range .ant-calendar-selected-end-date .ant-calendar-date {
+    background: var(--primary-color);
+  }
+  .ant-calendar-range .ant-calendar-selected-start-date .ant-calendar-date:hover,
+  .ant-calendar-range .ant-calendar-selected-end-date .ant-calendar-date:hover {
+    background: var(--primary-hover-color);
+  }
   .ant-calendar-selected-date .ant-calendar-date,
   .ant-calendar-selected-start-date .ant-calendar-date,
   .ant-calendar-selected-end-date .ant-calendar-date {
     background: var(--primary-color);
+    color: #fff;
   }
   .ant-calendar-selected-date .ant-calendar-date:hover,
   .ant-calendar-selected-start-date .ant-calendar-date:hover,
   .ant-calendar-selected-end-date .ant-calendar-date:hover {
     background: var(--primary-color);
+    color: #fff;
   }
   .ant-calendar .ant-calendar-ok-btn {
     background-color: var(--primary-color);

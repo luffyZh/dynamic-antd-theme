@@ -134,3 +134,7 @@ import { getThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
   - v0.3.2
   
     修复了`<Button type='danger' />`的bug, 这个bug导致当鼠标hover到`type='danger'`的按钮时，文字颜色会变成主题色，而不是白色.
+
+  - v0.3.6
+
+    修复了`DateRangePicker`的一些bug。
