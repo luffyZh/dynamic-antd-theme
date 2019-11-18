@@ -1,4 +1,4 @@
-![](https://user-gold-cdn.xitu.io/2019/9/26/16d6cd324609f27e?w=1920&h=1080&f=png&s=79201)
+![](./dynamic-antd-theme.png)
 
 A simple plugin to dynamic change [ant-design](https://ant.design) theme whether less or css. 
 

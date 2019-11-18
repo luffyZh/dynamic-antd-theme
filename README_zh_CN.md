@@ -1,4 +1,4 @@
-![](https://user-gold-cdn.xitu.io/2019/9/26/16d6cd324609f27e?w=1920&h=1080&f=png&s=79201)
+![](./dynamic-antd-theme.png)
 
 [Ant-Design](https://ant.design) 最简单的动态换肤方案。它是一个通用的解决方案，无论你是使用less还是css。
 
