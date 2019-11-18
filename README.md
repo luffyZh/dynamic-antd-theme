@@ -139,3 +139,8 @@ import { getThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
 
     Fix DateRangePicker some bugs.
 
+ - v0.3.7
+  
+    Fix`table:hover`in antd^3.20.0+
+
+
