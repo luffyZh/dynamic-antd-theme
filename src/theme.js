@@ -298,10 +298,6 @@ module.exports = `
     -webkit-box-shadow: 0 0 0 1px var(--primary-color) inset;
             box-shadow: 0 0 0 1px var(--primary-color) inset;
   }
-  .ant-fullcalendar-selected-day .ant-fullcalendar-value,
-  .ant-fullcalendar-month-panel-selected-cell .ant-fullcalendar-value {
-    background: var(--primary-color);
-  }
   .ant-fullcalendar-fullscreen .ant-fullcalendar-month:hover,
   .ant-fullcalendar-fullscreen .ant-fullcalendar-date:hover {
     background: var(--primary-shadow-color);
@@ -339,11 +335,21 @@ module.exports = `
   .ant-radio-button-wrapper:hover {
     color: var(--primary-color);
   }
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled),
   .ant-radio-button-wrapper-checked {
     color: var(--primary-color);
     border-color: var(--primary-color);
     -webkit-box-shadow: -1px 0 0 0 var(--primary-color);
             box-shadow: -1px 0 0 0 var(--primary-color);
+  }
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
+    color: var(--primary-hover-color);
+    border-color: var(--primary-hover-color);
+    -webkit-box-shadow: -1px 0 0 0 var(--primary-hover-color);
+            box-shadow: -1px 0 0 0 var(--primary-hover-color);
+  }
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):first-child {
+    border-color: var(--primary-color);
   }
   .ant-radio-button-wrapper-checked::before {
     background-color: var(--primary-color) !important;

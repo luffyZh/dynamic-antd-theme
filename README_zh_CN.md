@@ -142,3 +142,7 @@ import { getThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
   - v0.3.7
 
     修复了`table:hover`在antd@^3.20.0版本的样式不匹配问题
+
+  - v0.3.8
+
+    修复了`calender`组件的一些bug。

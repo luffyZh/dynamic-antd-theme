@@ -143,4 +143,8 @@ import { getThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
   
     Fix`table:hover`in antd^3.20.0+
 
+ - v0.3.8
+
+    Fix`calender`some bugs.
+
 
