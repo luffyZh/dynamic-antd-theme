@@ -146,3 +146,7 @@ import { getThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
   - v0.3.8
 
     修复了`calender`组件的一些bug。
+
+  - v0.3.9
+
+    修复了树状表格icon颜色不匹配的问题。

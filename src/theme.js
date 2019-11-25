@@ -845,6 +845,9 @@ module.exports = `
   .ant-table-tbody > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td {
     background: var(--primary-shadow-color);
   }
+  .ant-table-row-expand-icon:focus, .ant-table-row-expand-icon:hover {
+    color: var(--primary-hover-color);
+  }
   .ant-timeline-item-head-blue {
     color: var(--primary-color);
     border-color: var(--primary-color);

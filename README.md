@@ -147,4 +147,8 @@ import { getThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
 
     Fix`calender`some bugs.
 
+ - v0.3.9
+
+    Fix`tree-table-icon`bug.
+
 
