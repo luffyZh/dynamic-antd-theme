@@ -158,12 +158,12 @@ module.exports = `
   .ant-btn-link:hover,
   .ant-btn-link:focus {
     color: var(--primary-hover-color);
-    border-color: var(--primary-hover-color);
+    border-color: transparent;
   }
   .ant-btn-link:active,
   .ant-btn-link.active {
     color: var(--primary-active-color);
-    border-color: var(--primary-active-color);
+    border-color: transparent;
   }
   .ant-btn-background-ghost.ant-btn-primary {
     color: var(--primary-color);

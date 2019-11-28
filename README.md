@@ -150,5 +150,16 @@ import { getThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
  - v0.3.9
 
     Fix`tree-table-icon`bug.
+  
+ - v0.4.0
 
+    Add `/examples` for users to use && look for bugs.
+
+## Follow-Up Plan
+
+ - Support TS.
+ 
+ - Add Custom Define Class Array. Your define class in this Array will matching the primary color.
+
+> If you're interested in this repository, Fork/PR/Issue all are welcome.
 
