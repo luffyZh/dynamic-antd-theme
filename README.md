@@ -155,7 +155,7 @@ import { getThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
 
     Add `/examples` for users to use && look for bugs.
 
-## Follow-Up Plan
+## 🍎 Follow-Up Plan
 
  - Support TS.
  
