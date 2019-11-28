@@ -1,0 +1,5 @@
+{
+  "version": 2,
+  "name": "dynamic-antd-theme",
+  "builds": [{ "src": "package.json", "use": "@now/next" }]
+}
