@@ -3,7 +3,7 @@
   "version": "0.4.1",
   "description": "Dynamic change ant-design theme by simpley method.",
   "main": "lib/index.js",
-  "types": "dynamic-antd-theme.d.ts",
+  "types": "index.d.ts",
   "repository": "https://github.com/luffyZh/dynamic-antd-theme.git",
   "homepage": "https://dynamic-antd-theme.luffyzh.now.sh/",
   "author": "luffyZh <zhoudeyou945@126.com>",
