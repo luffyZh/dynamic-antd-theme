@@ -67,12 +67,12 @@ function themeChangeCallback (color) {
 | export       | Description         |
 | ---------- | ------------ |
 | default  | The <DynamicAntdTheme /> component   |
-| getThemeColor   | `param: color`, generate colorObj based on color  |
+| generateThemeColor   | `param: color`, generate colorObj based on color  |
 | changeAntdTheme   | `param: colorObj`, change the antd theme |
 
 #### Example
 ```
-import { getThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
+import { generateThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
 ...
 
 <Button
@@ -80,7 +80,7 @@ import { getThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
     () => {
       const color = 'blue';
       changeAntdTheme(
-        getThemeColor(color);
+        generateThemeColor(color);
       );
     }
   }
@@ -129,7 +129,7 @@ import { getThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
 
  - v0.3.0
   
-    Export `{ getThemeColor, changeAntdTheme }` methods to help the developer who don't need react-colorPicker
+    Export `{ generateThemeColor, changeAntdTheme }` methods to help the developer who don't need react-colorPicker
   
  - v0.3.2
   
@@ -155,9 +155,11 @@ import { getThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
 
     Add `/examples` for users to use && look for bugs.
 
-## 🍎 Follow-Up Plan
+ - v0.5.0
 
- - Support TS.
+    Add `index.d.ts` to support Typescript.
+
+## 🍎 Follow-Up Plan
  
  - Add Custom Define Class Array. Your define class in this Array will matching the primary color.
 

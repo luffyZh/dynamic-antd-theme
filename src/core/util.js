@@ -26,7 +26,7 @@ tinycolor.mix = function(color1, color2, amount) {
   return tinycolor(rgba);
 };
 
-function getHoverColor (color, ratio = 5) {
+function generateHoverColor (color, ratio = 5) {
   return tinycolor.mix(
     '#ffffff',
     color,
@@ -34,7 +34,7 @@ function getHoverColor (color, ratio = 5) {
   ).toHexString();
 }
 
-function getActiveColor (color, ratio = 7) {
+function generateActiveColor (color, ratio = 7) {
   return tinycolor.mix(
     '#333333',
     color,
@@ -42,7 +42,7 @@ function getActiveColor (color, ratio = 7) {
   ).toHexString();
 }
 
-function getShadowColor (color, ratio = 9) {
+function generateShadowColor (color, ratio = 9) {
   return tinycolor.mix(
     '#888888',
     color,
@@ -50,12 +50,12 @@ function getShadowColor (color, ratio = 9) {
   ).setAlpha(.2).toRgbString();
 }
 
-export function getThemeColor (color) {
+export function generateThemeColor (color) {
   return {
     primaryColor: color,
-    hoverColor: getHoverColor(color),
-    activeColor: getActiveColor(color),
-    shadowColor: getShadowColor(color)
+    hoverColor: generateHoverColor(color),
+    activeColor: generateActiveColor(color),
+    shadowColor: generateShadowColor(color)
   };
 }
 

@@ -67,12 +67,12 @@ function themeChangeCallback (color) {
 | export       | Description         |
 | ---------- | ------------ |
 | default  | 默认引入的是 <DynamicAntdTheme /> 组件 |
-| getThemeColor   | `param: color`, 根据传入的颜色生成一组颜色对象  |
+| generateThemeColor   | `param: color`, 根据传入的颜色生成一组颜色对象  |
 | changeAntdTheme   | `param: colorObj`, 改变主题的方法 |
 
 #### 示例
 ```
-import { getThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
+import { generateThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
 ...
 
 <Button
@@ -80,7 +80,7 @@ import { getThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
     () => {
       const color = 'blue';
       changeAntdTheme(
-        getThemeColor(color);
+        generateThemeColor(color);
       );
     }
   }
@@ -129,7 +129,7 @@ import { getThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
 
   - v0.3.0
   
-    增加了两个方法`{ getThemeColor, changeAntdTheme }`，为了那些不需要类似颜色选择器这种组件的开发者，开发者可以根据自己的需求来进行颜色的改变。
+    增加了两个方法`{ generateThemeColor, changeAntdTheme }`，为了那些不需要类似颜色选择器这种组件的开发者，开发者可以根据自己的需求来进行颜色的改变。
   
   - v0.3.2
   
@@ -153,11 +153,13 @@ import { getThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
 
   - v0.4.0
 
-    增加 `/examples` 文件夹方便用户使用以及查看效果和寻找bug.
+    增加 `/examples` 文件夹方便用户使用以及查看效果和寻找bug。
+
+  - v0.5.0
+
+    增加 `index.d.ts` 对 Typescript 的支持，现在正常引入组件不会报错。
 
 ## 🍎 后续计划
-
- - 增加对TS的支持.
  
  - 增加自定义类属性数组，你在这个数组内的自定义类将会自动匹配主题色系。
 
