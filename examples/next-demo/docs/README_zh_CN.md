@@ -61,12 +61,12 @@ function themeChangeCallback (color) {
 | export       | Description         |
 | ---------- | ------------ |
 | default  | 默认引入的是 <DynamicAntdTheme /> 组件 |
-| getThemeColor   | `param: color`, 根据传入的颜色生成一组颜色对象  |
+| generateThemeColor   | `param: color`, 根据传入的颜色生成一组颜色对象  |
 | changeAntdTheme   | `param: colorObj`, 改变主题的方法 |
 
 #### 示例
 ```
-import { getThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
+import { generateThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
 ...
 
 <Button
@@ -74,7 +74,7 @@ import { getThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
     () => {
       const color = 'blue';
       changeAntdTheme(
-        getThemeColor(color);
+        generateThemeColor(color);
       );
     }
   }
@@ -123,7 +123,7 @@ import { getThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
 
   - v0.3.0
   
-    增加了两个方法`{ getThemeColor, changeAntdTheme }`，为了那些不需要类似颜色选择器这种组件的开发者，开发者可以根据自己的需求来进行颜色的改变。
+    增加了两个方法`{ generateThemeColor, changeAntdTheme }`，为了那些不需要类似颜色选择器这种组件的开发者，开发者可以根据自己的需求来进行颜色的改变。
   
   - v0.3.2
   

@@ -45,6 +45,9 @@ const AntdComps = [
   }, {
     href: '/Timeline',
     title: 'Timeline 时间轴'
+  }, {
+    href: '/Steps',
+    title: 'Steps 步骤'
   }
 ];
 

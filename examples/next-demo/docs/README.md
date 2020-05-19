@@ -57,12 +57,12 @@ function themeChangeCallback (color) {
 | export       | Description         |
 | ---------- | ------------ |
 | default  | The <DynamicAntdTheme /> component   |
-| getThemeColor   | `param: color`, generate colorObj based on color  |
+| generateThemeColor   | `param: color`, generate colorObj based on color  |
 | changeAntdTheme   | `param: colorObj`, change the antd theme |
 
 #### Example
 ```
-import { getThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
+import { generateThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
 ...
 
 <Button
@@ -70,7 +70,7 @@ import { getThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
     () => {
       const color = 'blue';
       changeAntdTheme(
-        getThemeColor(color);
+        generateThemeColor(color);
       );
     }
   }
@@ -119,7 +119,7 @@ import { getThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
 
  - v0.3.0
   
-    Export `{ getThemeColor, changeAntdTheme }` methods to help the developer who don't need react-colorPicker
+    Export `{ generateThemeColor, changeAntdTheme }` methods to help the developer who don't need react-colorPicker
   
  - v0.3.2
   

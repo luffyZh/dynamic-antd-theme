@@ -777,9 +777,6 @@ module.exports = `
     background-color: #fff;
     border-color: var(--primary-color);
   }
-  .ant-steps-item-process .ant-steps-item-icon > .ant-steps-icon {
-    color: var(--primary-color);
-  }
   .ant-steps-item-process .ant-steps-item-icon > .ant-steps-icon .ant-steps-icon-dot {
     background: var(--primary-color);
   }
