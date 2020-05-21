@@ -2221,7 +2221,7 @@ duplexify@^3.4.2, duplexify@^3.6.0:
     stream-shift "^1.0.0"
 
 dynamic-antd-theme@latest:
-  version "0.3.9"
+  version "0.5.1"
   resolved "https://registry.npm.taobao.org/dynamic-antd-theme/download/dynamic-antd-theme-0.3.9.tgz#e3e1db3d17fc06d014bf7a5046d03a6fd839818b"
 
 ecc-jsbn@~0.1.1:

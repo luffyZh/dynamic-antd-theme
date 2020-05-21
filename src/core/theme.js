@@ -271,6 +271,9 @@ module.exports = `
   .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
     background-color: var(--primary-color);
   }
+  .ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: var(--primary-color);
+  }
   .ant-dropdown-menu-item-selected,
   .ant-dropdown-menu-submenu-title-selected,
   .ant-dropdown-menu-item-selected > a,
