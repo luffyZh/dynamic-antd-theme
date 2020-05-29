@@ -38,7 +38,55 @@ import DynamicAntdTheme from 'dynamic-antd-theme';
 </div>
 
 ```
-### More Example
+
+## ✨ Props
+
+| Props       | Type   | Default                  | Description         |
+| ---------- | ------ | --------------------- | ------------ |
+| primaryColor   | String | #1890d5 |  your antd initial @primary-color      |
+| storageName   | String |   custom-antd-primary-color  | the name that is saved in the localStorage    |
+| style   | Object |  null  | you can custom the component style simply  |
+| placement   | String | bottomRight |  change the color-picker position, `bottom, bottomRight, right, topRight, top, topLeft, left, bottomLeft`|
+| themeChangeCallback   | Func | null | you can do something use themeColor when themeColor changed. |
+| customCss   | String | '' | you can define custom css effect any element. |
+
+### How to use the primaryColors in customCss?
+
+You can do this using the following four variables（just like scss）：
+
+ - $primary-color
+ - $primary-hover-color
+ - $primary-active-color
+ - $primary-shadow-color
+
+```
+const customCss = `
+  .ant-btn {
+    font-family: fantasy;
+  }
+  .custom-title {
+    color: $primary-color;
+  }
+  .custom-title:hover {
+    color: $primary-hover-color;
+    cursor: pointer;
+  }
+  #custom-id {
+    color: $primary-shadow-color;
+  }
+`;
+```
+
+## 🌞 Export
+| export       | Description         |
+| ---------- | ------------ |
+| default  | The <DynamicAntdTheme /> component   |
+| generateThemeColor   | `param: color`, generate colorObj based on color  |
+| changeAntdTheme   | `param: (colorObj, customCss)`, change the antd theme |
+
+## 🌰 More Example
+
+### Basic Use
 
 ```
 
@@ -56,24 +104,38 @@ function themeChangeCallback (color) {
 
 ```
 
-## ✨ Props
+### Define Custom CSS
+```
+// define custom css
+const customCss = `
+  .ant-btn {
+    font-family: fantasy;
+  }
+  .custom-title {
+    color: $primary-color;
+  }
+  .custom-title:hover {
+    color: $primary-hover-color;
+    cursor: pointer;
+  }
+  #custom-id {
+    color: $primary-shadow-color;
+  }
+`;
 
-| Props       | Type   | Default                  | Description         |
-| ---------- | ------ | --------------------- | ------------ |
-| primaryColor   | String | #1890d5 |  your antd initial @primary-color      |
-| storageName   | String |   custom-antd-primary-color  | the name that is saved in the localStorage    |
-| style   | Object |  null  | you can custom the component style simply  |
-| placement   | String | bottomRight |  change the color-picker position, `bottom, bottomRight, right, topRight, top, topLeft, left, bottomLeft`|
-| themeChangeCallback   | Func | null | you can do something use themeColor when themeColor changed. |
+<DynamicAntdTheme
+  customCss={customCss}
+/>
 
-## 🌞 Export
-| export       | Description         |
-| ---------- | ------------ |
-| default  | The <DynamicAntdTheme /> component   |
-| generateThemeColor   | `param: color`, generate colorObj based on color  |
-| changeAntdTheme   | `param: colorObj`, change the antd theme |
+```
+The effects as flow:
 
-#### Example
+![](./custom-css.gif)
+
+### No Color-Picker
+
+> If u don't need the `color-picker`，[mini-dynamic-antd-theme](https://github.com/luffyZh/mini-dynamic-antd-theme) is more suitable for you.
+
 ```
 import { generateThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
 ...
@@ -162,9 +224,13 @@ import { generateThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
 
     Add `index.d.ts` to support Typescript.
 
+ - v0.6.0
+
+    Add `customCss` Props to support user custom define css.
+
 ## 🍎 Follow-Up Plan
  
- - Add Custom Define Class Array. Your define class in this Array will matching the primary color.
+ - More custom type: `border-color`, `border-radius`, etc.
 
 > If you're interested in this repository, Fork/PR/Issue all are welcome.
 

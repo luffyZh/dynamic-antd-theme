@@ -89,7 +89,20 @@ function IEVersion() {
   }
 }
 
-const generateStyleHtml = (colorObj) => {
+const generateCustomCss = customCss => {
+  if (typeof customCss !== 'string'
+    || (typeof customCss === 'string' && customCss.trim().length === 0)
+  ) {
+    return '';
+  }
+  customCss = customCss.replace(/\$primary\-color/g, 'var(--primary-color)');
+  customCss = customCss.replace(/\$primary\-hover-color/g, 'var(--primary-hover-color)');
+  customCss = customCss.replace(/\$primary\-active-color/g, 'var(--primary-active-color)');
+  customCss = customCss.replace(/\$primary\-shadow-color/g, 'var(--primary-shadow-color)');
+  return customCss;
+}
+
+const generateStyleHtml = (colorObj, customCss) => {
   const {
     activeColor,
     primaryColor,
@@ -105,9 +118,9 @@ const generateStyleHtml = (colorObj) => {
         --primary-shadow-color: ${shadowColor};
       }
     `;
-    return `${cssVar}\n${cssContent}`;
+    return `${cssVar}\n${cssContent}\n${generateCustomCss(customCss)}`;
   }
-  let IECSSContent = cssContent;
+  let IECSSContent = `${cssContent}${generateCustomCss(customCss)}`;
   IECSSContent = IECSSContent.replace(/var\(\-\-primary\-color\)/g, primaryColor);
   IECSSContent = IECSSContent.replace(/var\(\-\-primary\-hover\-color\)/g, hoverColor);
   IECSSContent = IECSSContent.replace(/var\(\-\-primary\-active\-color\)/g, activeColor);
@@ -115,16 +128,16 @@ const generateStyleHtml = (colorObj) => {
   return IECSSContent;
 }
 
-export function changeAntdTheme (colorObj) {
+export function changeAntdTheme (colorObj, customCss = '') {
   let styleNode = document.getElementById('dynamic_antd_theme_custom_style');
   if (!styleNode) {
     // avoid repeat insertion
     styleNode = document.createElement('style');
     styleNode.id = 'dynamic_antd_theme_custom_style';
-    styleNode.innerHTML = generateStyleHtml(colorObj);
+    styleNode.innerHTML = generateStyleHtml(colorObj, customCss);
     document.getElementsByTagName('head')[0].appendChild(styleNode);
   } else {
-    styleNode.innerHTML = generateStyleHtml(colorObj);
+    styleNode.innerHTML = generateStyleHtml(colorObj, customCss);
   }
 }
 
