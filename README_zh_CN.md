@@ -64,6 +64,35 @@ function themeChangeCallback (color) {
 | style   | Object |  { display: 'inline-block' }  | 可以简单的对组件进行样式设置  |
 | placement   | String | bottomRight |  改变color-picker的显示位置，有如下值可设置：`bottom, bottomRight, right, topRight, top, topLeft, left, bottomLeft`。|
 | themeChangeCallback   | Func | null | 你可以在主题颜色变化的同时传入一个你想修改的自定义callback，用来修改你自己的与主题相关的样式，如Header/Sider这种antd不附带主题色的场景 |
+| customCss   | String | '' | 自定义 CSS 并且使用主题色到各种元素上 |
+
+### 如何在 customCss 里使用自定义的主题色系?
+
+可以在 CSS 字符串里使用如下四个变量（熟悉 scss 的应该都清楚）：
+
+ - $primary-color
+ - $primary-hover-color
+ - $primary-active-color
+ - $primary-shadow-color
+
+```
+const customCss = `
+  .ant-btn {
+    font-family: fantasy;
+  }
+  .custom-title {
+    color: $primary-color;
+  }
+  .custom-title:hover {
+    color: $primary-hover-color;
+    cursor: pointer;
+  }
+  #custom-id {
+    color: $primary-shadow-color;
+  }
+`;
+```
+
 
 ## 🌞 方法
 | export       | Description         |
@@ -72,7 +101,58 @@ function themeChangeCallback (color) {
 | generateThemeColor   | `param: color`, 根据传入的颜色生成一组颜色对象  |
 | changeAntdTheme   | `param: colorObj`, 改变主题的方法 |
 
-#### 示例
+## 🌰 More Example
+
+### 基础用法
+
+```
+
+<DynamicAntdTheme primaryColor='#77dd66' />
+
+<DynamicAntdTheme storageName='my-custom-define-color' />
+
+<DynamicAntdTheme style={{ display: 'margin: 10px' }} />
+
+function themeChangeCallback (color) {
+  document.getElementById('my-header-bar').style.backgroundColor = color;
+}
+
+<DynamicAntdTheme themeChangeCallback={this.themeChangeCallback} />
+
+```
+
+### 自定义 CSS
+```
+// define custom css
+const customCss = `
+  .ant-btn {
+    font-family: fantasy;
+  }
+  .custom-title {
+    color: $primary-color;
+  }
+  .custom-title:hover {
+    color: $primary-hover-color;
+    cursor: pointer;
+  }
+  #custom-id {
+    color: $primary-shadow-color;
+  }
+`;
+
+<DynamicAntdTheme
+  customCss={customCss}
+/>
+
+```
+The effects as flow:
+
+![](./custom-css.gif)
+
+### 不使用 `color-picker`
+
+> If u don't need the `color-picker`，[mini-dynamic-antd-theme](https://github.com/luffyZh/mini-dynamic-antd-theme) is more suitable for you.
+
 ```
 import { generateThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
 ...
@@ -86,8 +166,7 @@ import { generateThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
       );
     }
   }
->改变主题</Button>
-```
+>Change Theme</Button>
 
 ## ⚠️ 注意
 
@@ -160,9 +239,13 @@ import { generateThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
   - v0.5.0
 
     增加 `index.d.ts` 对 Typescript 的支持，现在正常引入组件不会报错。
+  
+  - v0.6.0
+
+    增加了 `customCss` 属性，方便用户自定义任何样式相关的 CSS，以及应主题色到任何元素上（不一定必须是 antd-组件）。
 
 ## 🍎 后续计划
  
- - 增加自定义类属性数组，你在这个数组内的自定义类将会自动匹配主题色系。
+ - 增加更多的设置类型，更精细化，比如 `border-color`、`border-radius` 等。
 
 > 如果你对这个仓库感兴趣，Fork/PR/Issue都是欢迎的。
