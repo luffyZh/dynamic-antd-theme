@@ -89,14 +89,23 @@ html {
 }
 .ant-input:focus {
   border-color: var(--primary-hover-color);
-  box-shadow: var(--primary-shadow-color);
+}
+.ant-input:focus, .ant-input-focused {
+  box-shadow: 0 0 0 2px var(--primary-shadow-color);
 }
 .ant-input-group-addon .ant-select-open .ant-select-selection,
 .ant-input-group-addon .ant-select-focused .ant-select-selection {
   color: var(--primary-color);
 }
+.ant-input-affix-wrapper:hover {
+  border-color: var(--primary-hover-color);
+}
 .ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled) {
   border-color: var(--primary-hover-color);
+}
+.ant-input-affix-wrapper:focus, .ant-input-affix-wrapper-focused {
+  border-color: var(--primary-hover-color);
+  box-shadow: 0 0 0 2px var(--primary-shadow-color);
 }
 .ant-btn:hover,
 .ant-btn:focus {
