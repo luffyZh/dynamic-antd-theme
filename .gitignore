@@ -1,6 +1,7 @@
 demo/node_modules/
 examples/node_modules/
 examples/.next/
+docs/
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
