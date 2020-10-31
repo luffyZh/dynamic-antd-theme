@@ -78,6 +78,20 @@ module.exports = `
   .ant-select-dropdown-menu-item-active:not(.ant-select-dropdown-menu-item-disabled) {
     background-color: var(--primary-shadow-color);
   }
+  /* antd v4.6 */
+  .ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+    border-color: var(--primary-hover-color);
+  }
+  .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+    background-color: var(--primary-shadow-color);
+  }
+  .ant-select-focused:not(.ant-select-disabled).ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+    border-color: var(--primary-hover-color);
+    box-shadow: 0 0 0 2px var(--primary-shadow-color);
+  }
+
+  /* 
+  input 相关 */
   .ant-input:hover {
     border-color: var(--primary-hover-color);
   }
@@ -414,6 +428,8 @@ module.exports = `
   .ant-card-actions > li > span a:hover {
     color: var(--primary-color);
   }
+  /*
+  Tabs 相关 */
   .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab-active {
     color: var(--primary-color);
   }
@@ -436,6 +452,13 @@ module.exports = `
   .ant-tabs-nav .ant-tabs-tab-active {
     color: var(--primary-color);
   }
+  /* antd v4.6 */
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: var(--primary-color);
+  }
+
+  /*
+  cascader 相关*/
   .ant-cascader-picker:focus .ant-cascader-input {
     border-color: var(--primary-hover-color);
     -webkit-box-shadow: 0 0 0 2px var(--primary-shadow-color);

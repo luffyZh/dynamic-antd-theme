@@ -1,6 +1,9 @@
 import React from 'react';
 import { Button, Steps, Switch, Form, Input, Checkbox } from 'antd';
 import DynamicAntdTheme from 'dynamic-antd-theme';
+import SelectComp from './components/SelectComp';
+import SliderComp from './components/SliderComp';
+import TabComp from './components/TabComp';
 import './App.css';
 
 const { Step } = Steps;
@@ -91,6 +94,12 @@ function App() {
         </Form.Item>
       </Form>
       <br/> <br/>
+      <SelectComp />
+      <br /><br />
+      <SliderComp />
+      <br /><br />
+      <TabComp />
+      <br /><br />
       <DynamicAntdTheme
         customCss={customCss}
       />
