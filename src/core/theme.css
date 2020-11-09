@@ -55,6 +55,8 @@ html {
 .ant-anchor-link-active > .ant-anchor-link-title {
   color: var(--primary-color);
 }
+/*
+Select 相关*/
 .ant-select-auto-complete.ant-select .ant-input:focus,
 .ant-select-auto-complete.ant-select .ant-input:hover {
   border-color: var(--primary-hover-color);
@@ -619,6 +621,29 @@ cascader 相关*/
 .ant-time-picker-panel-select li:hover {
   background: var(--primary-shadow-color);
 }
+/* Picker V4.8 新增 */
+.ant-picker-focused, .ant-picker:hover  {
+  border-color: var(--primary-color);
+}
+.ant-picker-focused {
+  box-shadow: var(--primary-shadow-color) 0px 0px 0px 2px;;
+}
+.ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before {
+  border-color: var(--primary-color)
+}
+.ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner, .ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner, .ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner {
+  color: rgb(255, 255, 255);
+  background: var(--primary-color);
+}
+.ant-picker-time-panel-column > li.ant-picker-time-panel-cell-selected .ant-picker-time-panel-cell-inner {
+  background: var(--primary-shadow-color);
+}
+.ant-picker-range .ant-picker-active-bar {
+  background: var(--primary-color);
+}
+
+/*
+Tag 标签*/
 .ant-tag-checkable:not(.ant-tag-checkable-checked):hover {
   color: var(--primary-color);
 }
@@ -882,15 +907,19 @@ cascader 相关*/
 .ant-table-filter-dropdown-link:active {
   color: var(--primary-active-color);
 }
-.ant-table-thead > tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td,
-.ant-table-tbody > tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td,
-.ant-table-thead > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td,
-.ant-table-tbody > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td {
-  background: var(--primary-shadow-color);
-}
 .ant-table-row-expand-icon:focus, .ant-table-row-expand-icon:hover {
   color: var(--primary-hover-color);
 }
+/* Table 4.8 */
+.ant-table-tbody>tr.ant-table-row-selected>td {
+  background: var(--primary-shadow-color);
+}
+
+.ant-table-tbody>tr.ant-table-row-selected:hover>td {
+  background: var(--primary-shadow-color);
+}
+/*
+Select组件*/
 .ant-timeline-item-head-blue {
   color: var(--primary-color);
   border-color: var(--primary-color);

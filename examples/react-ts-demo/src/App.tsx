@@ -4,7 +4,10 @@ import DynamicAntdTheme from 'dynamic-antd-theme';
 import SelectComp from './components/SelectComp';
 import SliderComp from './components/SliderComp';
 import TabComp from './components/TabComp';
+import PickerComp from './components/PickerComp';
 import './App.css';
+import TableComp from './components/TableComp';
+import TableSelectComp from './components/TableSelectComp';
 
 const { Step } = Steps;
 
@@ -93,16 +96,23 @@ function App() {
           </Button>
         </Form.Item>
       </Form>
-      <br/> <br/>
+      <h2>Select:</h2>
       <SelectComp />
-      <br /><br />
+      <h2>Slider:</h2>
       <SliderComp />
-      <br /><br />
+      <h2>Tab:</h2>
       <TabComp />
-      <br /><br />
-      <DynamicAntdTheme
-        customCss={customCss}
-      />
+      <h2>Picker:</h2>
+      <PickerComp />
+      <h2>table:</h2>
+      <TableComp />
+      <h2>table-select:</h2>
+      <TableSelectComp />
+      <div style={{ marginTop: 20 }}>
+        <DynamicAntdTheme
+          customCss={customCss}
+        />
+      </div>
     </div>
   );
 }
