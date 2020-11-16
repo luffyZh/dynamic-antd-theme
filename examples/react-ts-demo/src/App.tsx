@@ -8,6 +8,7 @@ import PickerComp from './components/PickerComp';
 import './App.css';
 import TableComp from './components/TableComp';
 import TableSelectComp from './components/TableSelectComp';
+import MenuComp from './components/MenuComp';
 
 const { Step } = Steps;
 
@@ -108,6 +109,8 @@ function App() {
       <TableComp />
       <h2>table-select:</h2>
       <TableSelectComp />
+      <h2>menu:</h2>
+      <MenuComp />
       <div style={{ marginTop: 20 }}>
         <DynamicAntdTheme
           customCss={customCss}

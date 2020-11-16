@@ -301,6 +301,13 @@ module.exports = `
   .ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
     background-color: var(--primary-color);
   }
+  /* antd v4.0 */
+  .ant-menu-dark.ant-menu-horizontal > .ant-menu-item:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+  /*
+  Dropdown组件*/
   .ant-dropdown-menu-item-selected,
   .ant-dropdown-menu-submenu-title-selected,
   .ant-dropdown-menu-item-selected > a,
