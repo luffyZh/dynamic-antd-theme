@@ -435,6 +435,13 @@ Dropdown组件*/
   background: var(--primary-active-color);
   border-color: var(--primary-active-color);
 }
+/* ant v4.0之后 */
+.ant-radio-button-wrapper-checked:not([class*=' ant-radio-button-wrapper-disabled']).ant-radio-button-wrapper:first-child {
+  border-right-color: var(--primary-color);
+}
+
+/*
+AntCard相关*/
 .ant-card-actions > li > span:hover {
   color: var(--primary-color);
   -webkit-transition: color 0.3s;

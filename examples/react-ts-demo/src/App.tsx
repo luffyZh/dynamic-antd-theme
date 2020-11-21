@@ -9,6 +9,7 @@ import './App.css';
 import TableComp from './components/TableComp';
 import TableSelectComp from './components/TableSelectComp';
 import MenuComp from './components/MenuComp';
+import RadioComp from './components/RadioComp';
 
 const { Step } = Steps;
 
@@ -48,7 +49,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1></h1>
       <Steps current={1}>
         <Step title="Finished" description="This is a description." />
         <Step title="In Progress" subTitle="Left 00:00:08" description="This is a description." />
@@ -111,6 +111,8 @@ function App() {
       <TableSelectComp />
       <h2>menu:</h2>
       <MenuComp />
+      <h2>radio:</h2>
+      <RadioComp />
       <div style={{ marginTop: 20 }}>
         <DynamicAntdTheme
           customCss={customCss}
