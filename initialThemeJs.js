@@ -34,7 +34,7 @@ async function intialCss2JsFile() {
   }
   // css 字符串
   const cssStr = css2str(fs.readFileSync(inFilePath));
-  const inStr = `module.exports = \`\r\n\t${cssStr}\r\n\`;`;
+  const inStr = `module.exports = \`\t${cssStr}\r\n\`;`;
   // 删除之后重新创建一个空文件
   fs.writeFileSync(outFilePath, inStr);
 }

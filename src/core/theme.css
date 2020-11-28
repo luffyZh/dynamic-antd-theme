@@ -848,6 +848,8 @@ Tag 标签*/
 .ant-slider-dot-active {
   border-color: var(--primary-active-color);
 }
+/*
+Steps 相关*/
 .ant-steps-item-icon > .ant-steps-icon {
   color: var(--primary-color);
 }
@@ -889,6 +891,14 @@ Tag 标签*/
 .ant-steps-item-custom.ant-steps-item-process .ant-steps-item-icon > .ant-steps-icon {
   color: var(--primary-color);
 }
+.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-icon {
+  background: var(--primary-color);
+}
+.ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
+  background-color: var(--primary-color);
+}
+/*
+Switch 相关*/
 .ant-switch-checked.ant-switch-loading .ant-switch-loading-icon {
   color: var(--primary-color);
 }
