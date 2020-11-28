@@ -10,6 +10,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "webpack --progress --mode development",
+    "prebuild": "node initialthemeJs.js",
     "build": "webpack -p --progress",
     "watch": "webpack --watch --progress"
   },
@@ -27,6 +28,7 @@
     "babel-preset-stage-1": "^6.24.1",
     "bezier-easing": "^2.1.0",
     "clean-webpack-plugin": "^0.1.19",
+    "css2str": "^0.1.1",
     "prop-types": "^15.6.2",
     "react": "^16.8.6",
     "react-color": "^2.17.3",
