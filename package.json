@@ -10,7 +10,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "webpack --progress --mode development",
-    "prebuild": "node autoCss2Str.js",
+    "prebuild": "node utils/autoCss2Str.js",
     "build": "webpack -p --progress",
     "watch": "webpack --watch --progress"
   },
