@@ -82,7 +82,7 @@ const customCss = `
 | ---------- | ------------ |
 | default  | The <DynamicAntdTheme /> component   |
 | generateThemeColor   | `param: color`, generate colorObj based on color  |
-| changeAntdTheme   | `param: (colorObj, customCss)`, change the antd theme |
+| changeAntdTheme   | `param: (colorObj, options)`, change the antd theme. The options specific attributes are as follows： - `storageName`: This can be configured to set storageName when not using picker . - `customCss`: custom Css |
 
 ## 🌰 More Example
 
@@ -227,6 +227,10 @@ import { generateThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
  - v0.6.0
 
     Add `customCss` Props to support user custom define css.
+ 
+ - v0.7.0
+
+    Add `options` in the  `changeAntdTheme`.
 
 ## 🍎 Follow-Up Plan
  

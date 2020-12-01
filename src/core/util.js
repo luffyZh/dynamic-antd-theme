@@ -128,8 +128,19 @@ const generateStyleHtml = (colorObj, customCss) => {
   return IECSSContent;
 }
 
-export function changeAntdTheme (colorObj, customCss = '') {
+const defaultOptions = {
+  customCss: '',
+  storageName: '',
+}
+
+export function changeAntdTheme (colorObj, options = { ...defaultOptions }) {
   let styleNode = document.getElementById('dynamic_antd_theme_custom_style');
+  const { customCss, storageName } = options;
+  // deal ssr
+  if (typeof window !== 'undefined') {
+    // 这种方式就是不使用 picker 组件进行调用，也要存一份
+    storageName && window.localStorage.setItem('custom-antd-primary-color', colorObj.primaryColor);
+  }
   if (!styleNode) {
     // avoid repeat insertion
     styleNode = document.createElement('style');

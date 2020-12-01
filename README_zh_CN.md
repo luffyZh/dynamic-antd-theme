@@ -4,7 +4,7 @@
 
 > After gzip: 42.7kB
 
-**此项目起初是针对 `ant-design`，也就是针对 React 项目，不过随着使用发现，其实核心样式对于 `ant-design-vue` 也是适用的，并且为了方便使用，项目进行了一键式封装，将 color-picker 也封装到了项目中，导致项目体积过大。针对此问题，开发了一个新的小版本 —— [mini-dynamic-antd-theme](https://github.com/luffyZh/mini-dynamic-antd-theme)，感兴趣的可以去使用。**
+**此项目起初是针对 `ant-design`，也就是针对 React 项目，不过随着使用发现，其实核心样式对于 `ant-design-vue` 也是适用的，并且为了方便使用，项目进行了一键式封装，将 `color-picker` 也封装到了项目中，导致项目体积过大。针对此问题，开发了一个新的小版本 —— [mini-dynamic-antd-theme](https://github.com/luffyZh/mini-dynamic-antd-theme)，感兴趣的可以去使用。**
 
 ## 🌍 Browser Support
 
@@ -93,15 +93,14 @@ const customCss = `
 `;
 ```
 
-
 ## 🌞 方法
 | export       | Description         |
 | ---------- | ------------ |
 | default  | 默认引入的是 <DynamicAntdTheme /> 组件 |
 | generateThemeColor   | `param: color`, 根据传入的颜色生成一组颜色对象  |
-| changeAntdTheme   | `param: colorObj`, 改变主题的方法 |
+| changeAntdTheme   | `param: (colorObj, options = { customCss: '', storageName: '' })`, 修改 Antd 的主题。 `options`参数有以下两个属性可以进行配置 . - `customCss`: 自定义的CSS样式， `storageName`: 如果没有使用 Picker 组件，可以通过这里进行 strogeName 的配置。 |
 
-## 🌰 More Example
+## 🌰 更多例子
 
 ### 基础用法
 
@@ -122,6 +121,7 @@ function themeChangeCallback (color) {
 ```
 
 ### 自定义 CSS
+
 ```
 // define custom css
 const customCss = `
@@ -243,6 +243,10 @@ import { generateThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
   - v0.6.0
 
     增加了 `customCss` 属性，方便用户自定义任何样式相关的 CSS，以及应主题色到任何元素上（不一定必须是 antd-组件）。
+  
+  - v0.7.0
+
+    `changeAntdTheme` 里面新增了参数对象 `options`.
 
 ## 🍎 后续计划
  

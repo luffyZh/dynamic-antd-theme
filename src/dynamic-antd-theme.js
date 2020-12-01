@@ -37,7 +37,7 @@ class DynamicAntdTheme extends Component {
     // initial storage color
     const storageColor = window.localStorage.getItem(storageName);
     if (storageColor) {
-      changeAntdTheme(generateThemeColor(storageColor), customCss);
+      changeAntdTheme(generateThemeColor(storageColor), { customCss });
       document.getElementById('change_antd_theme_color').style.backgroundColor = storageColor;
       if (themeChangeCallback) {
         themeChangeCallback(storageColor);
@@ -55,7 +55,7 @@ class DynamicAntdTheme extends Component {
 
   handleChange = color => {
     this.setState({ color: color.rgb }, () => {
-      changeAntdTheme(generateThemeColor(color.hex), this.props.customCss);
+      changeAntdTheme(generateThemeColor(color.hex), { customCss: this.props.customCss });
       window.localStorage.setItem(this.props.storageName, color.hex);
       this.props.themeChangeCallback && this.props.themeChangeCallback(color.hex);
     });
