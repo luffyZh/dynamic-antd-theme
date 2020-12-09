@@ -10,7 +10,6 @@ import TableComp from './components/TableComp';
 import TableSelectComp from './components/TableSelectComp';
 import MenuComp from './components/MenuComp';
 import RadioComp from './components/RadioComp';
-import LayoutComp from './components/LayoutComp';
 
 const { Step } = Steps;
 
