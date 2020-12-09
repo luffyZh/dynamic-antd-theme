@@ -10,6 +10,7 @@ import TableComp from './components/TableComp';
 import TableSelectComp from './components/TableSelectComp';
 import MenuComp from './components/MenuComp';
 import RadioComp from './components/RadioComp';
+import LayoutComp from './components/LayoutComp';
 
 const { Step } = Steps;
 
@@ -48,7 +49,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App" style={{ paddingBottom: 20 }}>
       <Steps current={1}>
         <Step title="Finished" description="This is a description." />
         <Step title="In Progress" subTitle="Left 00:00:08" description="This is a description." />

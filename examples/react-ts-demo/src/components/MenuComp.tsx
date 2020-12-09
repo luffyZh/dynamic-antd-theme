@@ -26,14 +26,14 @@ class App extends React.Component {
   render() {
     return (
       <div style={{ width: 600 }}>
-        <Button type="primary" onClick={this.toggleCollapsed} style={{ marginBottom: 16 }}>
+        <Button type="primary" onClick={this.toggleCollapsed} style={{ marginBottom: 16 }} ghost>
           {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined)}
         </Button>
         <Menu
           defaultSelectedKeys={['1']}
           defaultOpenKeys={['sub1']}
           mode="horizontal"
-          theme="dark"
+          // theme="dark"
           inlineCollapsed={this.state.collapsed}
         >
           <Menu.Item key="1" icon={<PieChartOutlined />}>
