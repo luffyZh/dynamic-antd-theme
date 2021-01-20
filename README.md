@@ -81,8 +81,7 @@ const customCss = `
 | export       | Description         |
 | ---------- | ------------ |
 | default  | The <DynamicAntdTheme /> component   |
-| generateThemeColor   | `param: color`, generate colorObj based on color  |
-| changeAntdTheme   | `param: (colorObj, options)`, change the antd theme. The options specific attributes are as follows： - `storageName`: This can be configured to set storageName when not using picker . - `customCss`: custom Css |
+| changeAntdTheme   | `param: (color, options)`, change the antd theme. The options specific attributes are as follows： - `storageName`: This can be configured to set storageName when not using picker . - `customCss`: custom Css |
 
 ## 🌰 More Example
 
@@ -144,9 +143,7 @@ import { generateThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
   onClick={
     () => {
       const color = 'blue';
-      changeAntdTheme(
-        generateThemeColor(color);
-      );
+      changeAntdTheme(color);
     }
   }
 >Change Theme</Button>
@@ -231,6 +228,10 @@ import { generateThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
  - v0.7.0
 
     Add `options` in the  `changeAntdTheme`.
+ 
+ - v0.8.0
+
+    Remove `generateThemeColor`, now `changeAntdTheme` first param only need primary color.
 
 ## 🍎 Follow-Up Plan
  

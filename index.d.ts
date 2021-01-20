@@ -28,9 +28,8 @@ declare module 'dynamic-antd-theme' {
     shadowColor: ColorInputWithoutInstance;
   };
   
-  export function changeAntdTheme(colorObj: IColorObj, customCss?: string): void;
-  
-  export function generateThemeColor(color: ColorInputWithoutInstance): IColorObj;
+  export function changeAntdTheme(colorObj: ColorInputWithoutInstance, customCss?: string): void;
+
 
   export { default } from './index';
 }

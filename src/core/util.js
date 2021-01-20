@@ -50,7 +50,7 @@ function generateShadowColor (color, ratio = 9) {
   ).setAlpha(.2).toRgbString();
 }
 
-export function generateThemeColor (color) {
+function generateThemeColor (color) {
   return {
     primaryColor: color,
     hoverColor: generateHoverColor(color),
@@ -133,7 +133,8 @@ const defaultOptions = {
   storageName: '',
 }
 
-export function changeAntdTheme (colorObj, options = { ...defaultOptions }) {
+export function changeAntdTheme (color, options = { ...defaultOptions }) {
+  const colorObj = generateThemeColor(color);
   let styleNode = document.getElementById('dynamic_antd_theme_custom_style');
   const { customCss, storageName } = options;
   // deal ssr

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Steps, Switch, Form, Input, Checkbox } from 'antd';
-import DynamicAntdTheme from 'dynamic-antd-theme';
+import DynamicAntdTheme, { changeAntdTheme } from 'dynamic-antd-theme';
 import SelectComp from './components/SelectComp';
 import SliderComp from './components/SliderComp';
 import TabComp from './components/TabComp';
@@ -117,6 +117,7 @@ function App() {
         <DynamicAntdTheme
           customCss={customCss}
         />
+        <Button onClick={() => changeAntdTheme('green')}>点我变绿颜色</Button>
       </div>
     </div>
   );

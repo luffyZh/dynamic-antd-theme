@@ -97,7 +97,6 @@ const customCss = `
 | export       | Description         |
 | ---------- | ------------ |
 | default  | 默认引入的是 <DynamicAntdTheme /> 组件 |
-| generateThemeColor   | `param: color`, 根据传入的颜色生成一组颜色对象  |
 | changeAntdTheme   | `param: (colorObj, options = { customCss: '', storageName: '' })`, 修改 Antd 的主题。 `options`参数有以下两个属性可以进行配置 . - `customCss`: 自定义的CSS样式， `storageName`: 如果没有使用 Picker 组件，可以通过这里进行 strogeName 的配置。 |
 
 ## 🌰 更多例子
@@ -154,16 +153,14 @@ The effects as flow:
 > If u don't need the `color-picker`，[mini-dynamic-antd-theme](https://github.com/luffyZh/mini-dynamic-antd-theme) is more suitable for you.
 
 ```
-import { generateThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
+import { changeAntdTheme } from 'dynamic-antd-theme';
 ...
 
 <Button
   onClick={
     () => {
       const color = 'blue';
-      changeAntdTheme(
-        generateThemeColor(color);
-      );
+      changeAntdTheme(color);
     }
   }
 >Change Theme</Button>
@@ -247,6 +244,10 @@ import { generateThemeColor, changeAntdTheme } from 'dynamic-antd-theme';
   - v0.7.0
 
     `changeAntdTheme` 里面新增了参数对象 `options`.
+
+  - v0.8.0
+
+    移除了 `generateThemeColor`，现在 `changeAntdTheme` 第一个参数传入一个原始的主题色 color 即可。
 
 ## 🍎 后续计划
  

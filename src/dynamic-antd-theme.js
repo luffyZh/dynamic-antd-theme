@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { SketchPicker } from 'react-color';
 import tinycolor from 'tinycolor2';
-import { generateThemeColor, changeAntdTheme, placementSketchPicker } from './core/util';
+import { changeAntdTheme, placementSketchPicker } from './core/util';
 
 class DynamicAntdTheme extends Component {
   
@@ -37,7 +37,7 @@ class DynamicAntdTheme extends Component {
     // initial storage color
     const storageColor = window.localStorage.getItem(storageName);
     if (storageColor) {
-      changeAntdTheme(generateThemeColor(storageColor), { customCss });
+      changeAntdTheme(storageColor, { customCss });
       document.getElementById('change_antd_theme_color').style.backgroundColor = storageColor;
       if (themeChangeCallback) {
         themeChangeCallback(storageColor);
@@ -55,7 +55,7 @@ class DynamicAntdTheme extends Component {
 
   handleChange = color => {
     this.setState({ color: color.rgb }, () => {
-      changeAntdTheme(generateThemeColor(color.hex), { customCss: this.props.customCss });
+      changeAntdTheme(color.hex, { customCss: this.props.customCss });
       window.localStorage.setItem(this.props.storageName, color.hex);
       this.props.themeChangeCallback && this.props.themeChangeCallback(color.hex);
     });
@@ -113,4 +113,4 @@ class DynamicAntdTheme extends Component {
   }
 }
 
-export { DynamicAntdTheme as default, generateThemeColor, changeAntdTheme }
+export { DynamicAntdTheme as default, changeAntdTheme };
