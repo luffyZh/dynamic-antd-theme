@@ -1,6 +1,6 @@
 {
   "name": "dynamic-antd-theme",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Dynamic change ant-design theme by simpley method.",
   "main": "lib/index.js",
   "types": "index.d.ts",
