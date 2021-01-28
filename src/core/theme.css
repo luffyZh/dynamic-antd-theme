@@ -116,6 +116,12 @@ input 相关 */
   border-color: var(--primary-hover-color);
   box-shadow: 0 0 0 2px var(--primary-shadow-color);
 }
+.ant-input-search .ant-input:hover, .ant-input-search .ant-input:focus {
+  border-color: var(--primary-hover-color);
+}
+.ant-input-search .ant-input:hover + .ant-input-group-addon .ant-input-search-button:not(.ant-btn-primary), .ant-input-search .ant-input:focus + .ant-input-group-addon .ant-input-search-button:not(.ant-btn-primary) {
+  border-color: var(--primary-hover-color);
+}
 .ant-btn:hover,
 .ant-btn:focus {
   color: var(--primary-hover-color);

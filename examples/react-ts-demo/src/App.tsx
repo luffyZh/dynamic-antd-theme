@@ -10,6 +10,7 @@ import TableComp from './components/TableComp';
 import TableSelectComp from './components/TableSelectComp';
 import MenuComp from './components/MenuComp';
 import RadioComp from './components/RadioComp';
+import InputComp from './components/InputComp';
 
 const { Step } = Steps;
 
@@ -113,6 +114,8 @@ function App() {
       <MenuComp />
       <h2>radio:</h2>
       <RadioComp />
+      <h2>Input Search:</h2>
+      <InputComp />
       <div style={{ marginTop: 20 }}>
         <DynamicAntdTheme
           customCss={customCss}
