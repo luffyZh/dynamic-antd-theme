@@ -44,13 +44,13 @@ function generateActiveColor (color, ratio = 7) {
 
 function generateShadowColor (color, ratio = 9) {
   return tinycolor.mix(
-    '#888888',
+    '#ffffff',
     color,
     (1 - (currentEasing(ratio) - primaryEasing) / (1 - primaryEasing)) * 100
-  ).setAlpha(.2).toRgbString();
+  ).toRgbString();
 }
 
-function generateThemeColor (color) {
+export function generateThemeColor (color) {
   return {
     primaryColor: color,
     hoverColor: generateHoverColor(color),

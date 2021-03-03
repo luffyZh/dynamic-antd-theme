@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { SketchPicker } from 'react-color';
 import tinycolor from 'tinycolor2';
-import { changeAntdTheme, placementSketchPicker } from './core/util';
+import { changeAntdTheme, generateThemeColor, placementSketchPicker } from './core/util';
 
 class DynamicAntdTheme extends Component {
   
@@ -113,4 +113,4 @@ class DynamicAntdTheme extends Component {
   }
 }
 
-export { DynamicAntdTheme as default, changeAntdTheme };
+export { DynamicAntdTheme as default, changeAntdTheme, generateThemeColor };

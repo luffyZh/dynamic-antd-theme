@@ -1029,6 +1029,16 @@ Select组件*/
 .ant-tree li .ant-tree-node-content-wrapper.ant-tree-node-selected {
   background-color: var(--primary-shadow-color);
 }
+.ant-tree-checkbox-checked.ant-tree-checkbox-disabled .ant-tree-checkbox-inner {
+  background-color: #f5f5f5;
+}
+.ant-select-tree .ant-select-tree-node-content-wrapper.ant-select-tree-node-selected {
+  background-color: var(--primary-shadow-color);
+}
+.ant-tree .ant-tree-node-content-wrapper.ant-tree-node-selected {
+  background-color: var(--primary-shadow-color);
+}
+
 .ant-typography a {
   color: var(--primary-color);
 }
