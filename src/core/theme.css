@@ -317,6 +317,15 @@ input 相关 */
   color: var(--primary-color);
   border-bottom: 2px solid var(--primary-color);
 }
+.ant-menu-submenu-selected {
+  color: var(--primary-color);
+}
+.ant-menu-item a:hover {
+  color: var(--primary-color);
+}
+.ant-menu-submenu:hover>.ant-menu-submenu-title>.ant-menu-submenu-arrow,.ant-menu-submenu:hover>.ant-menu-submenu-title>.ant-menu-submenu-expand-icon {
+  color: var(--primary-color);
+}
 /*
 Dropdown组件*/
 .ant-dropdown-menu-item-selected,

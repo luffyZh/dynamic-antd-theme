@@ -12,6 +12,7 @@ import MenuComp from './components/MenuComp';
 import RadioComp from './components/RadioComp';
 import InputComp from './components/InputComp';
 import TreeComp from './components/TreeComp';
+import NewMenuComp from './components/NewMenuComp';
 
 const { Step } = Steps;
 
@@ -119,7 +120,9 @@ function App() {
       <InputComp />
       <h2>Tree Select:</h2>
       <TreeComp />
-      <div style={{ marginTop: 20 }}>
+      <h2>New Menu</h2>
+      <NewMenuComp />
+      <div style={{ marginTop: 60 }}>
         <DynamicAntdTheme
           customCss={customCss}
         />
