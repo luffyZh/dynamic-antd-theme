@@ -165,7 +165,7 @@ export default ({ children, path }) => (
         </ItemGroup>
       </Menu>
       <DyanamicAntdTheme
-        placement='topRight'
+        placement={'bottomRight'}
         style={themeStyle}
       />
     </Sider>
