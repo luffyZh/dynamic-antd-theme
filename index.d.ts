@@ -12,8 +12,7 @@ declare module 'dynamic-antd-theme' {
     'topRight',
     'right',
   }
-
-  interface IComponentProps {
+  export interface IComponentProps {
     primaryColor?: ColorInputWithoutInstance;
     storageName?: string;
     style?: CSSStyleDeclaration;
@@ -29,8 +28,5 @@ declare module 'dynamic-antd-theme' {
   };
   
   export function changeAntdTheme(colorObj: ColorInputWithoutInstance, customCss?: string): void;
-
-
-  export { default } from './index';
 }
 

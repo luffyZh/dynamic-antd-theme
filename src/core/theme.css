@@ -48,18 +48,17 @@ html {
 .ant-anchor-link-active > .ant-anchor-link-title {
   color: var(--primary-color);
 }
-/*
-Select 相关*/
 .ant-select-auto-complete.ant-select .ant-input:focus,
 .ant-select-auto-complete.ant-select .ant-input:hover {
   border-color: var(--primary-hover-color);
 }
-.ant-select-selection:hover {
+.ant-select-selection:hover, .ant-select:not(.ant-select-disabled):hover .ant-select-selector {
   border-color: var(--primary-hover-color);
 }
 .ant-select-focused .ant-select-selection,
 .ant-select-selection:focus,
-.ant-select-selection:active {
+.ant-select-selection:active,
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
   border-color: var(--primary-hover-color);
   -webkit-box-shadow: 0 0 0 2px var(--primary-shadow-color);
           box-shadow: 0 0 0 2px var(--primary-shadow-color);
@@ -76,23 +75,10 @@ Select 相关*/
 .ant-select-dropdown-menu-item:hover:not(.ant-select-dropdown-menu-item-disabled) {
   background-color: var(--primary-shadow-color);
 }
-.ant-select-dropdown-menu-item-active:not(.ant-select-dropdown-menu-item-disabled) {
+.ant-select-dropdown-menu-item-active:not(.ant-select-dropdown-menu-item-disabled),
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
   background-color: var(--primary-shadow-color);
 }
-/* antd v4.6 */
-.ant-select:not(.ant-select-disabled):hover .ant-select-selector {
-  border-color: var(--primary-hover-color);
-}
-.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
-  background-color: var(--primary-active-color);
-}
-.ant-select-focused:not(.ant-select-disabled).ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
-  border-color: var(--primary-hover-color);
-  box-shadow: 0 0 0 2px var(--primary-shadow-color);
-}
-
-/* 
-input 相关 */
 .ant-input:hover {
   border-color: var(--primary-hover-color);
 }
@@ -301,11 +287,11 @@ input 相关 */
 .ant-menu-inline .ant-menu-item::after {
   border-right: 3px solid var(--primary-color);
 }
-.ant-menu.ant-menu-dark .ant-menu-item-selected,
-.ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
+.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
   background-color: var(--primary-color);
 }
-.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
+.ant-menu.ant-menu-dark .ant-menu-item-selected,
+.ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
   background-color: var(--primary-color);
 }
 /* antd v4.0 */
@@ -462,9 +448,6 @@ AntCard相关*/
 .ant-card-actions > li > span a:hover {
   color: var(--primary-color);
 }
-
-/*
-Tabs 相关 */
 .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab-active {
   color: var(--primary-color);
 }
@@ -647,6 +630,7 @@ cascader 相关*/
 .ant-time-picker-panel-select li:hover {
   background: var(--primary-shadow-color);
 }
+
 /* Picker V4.8 新增 */
 .ant-picker-focused, .ant-picker:hover  {
   border-color: var(--primary-color);
@@ -661,6 +645,29 @@ cascader 相关*/
   color: rgb(255, 255, 255);
   background: var(--primary-color);
 }
+
+.ant-picker-cell-in-view.ant-picker-cell-range-start:not(.ant-picker-cell-range-start-single)::before, .ant-picker-cell-in-view.ant-picker-cell-range-end:not(.ant-picker-cell-range-end-single)::before, .ant-picker-cell-in-view.ant-picker-cell-in-range::before {
+    background: var(--primary-shadow-color);
+}
+
+.ant-picker-cell-in-view.ant-picker-cell-range-hover-start:not(.ant-picker-cell-in-range):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end)::after, .ant-picker-cell-in-view.ant-picker-cell-range-hover-end:not(.ant-picker-cell-in-range):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end)::after, .ant-picker-cell-in-view.ant-picker-cell-range-hover-start.ant-picker-cell-range-start-single::after, .ant-picker-cell-in-view.ant-picker-cell-range-hover-start.ant-picker-cell-range-start.ant-picker-cell-range-end.ant-picker-cell-range-end-near-hover::after, .ant-picker-cell-in-view.ant-picker-cell-range-hover-end.ant-picker-cell-range-start.ant-picker-cell-range-end.ant-picker-cell-range-start-near-hover::after, .ant-picker-cell-in-view.ant-picker-cell-range-hover-end.ant-picker-cell-range-end-single::after, .ant-picker-cell-in-view.ant-picker-cell-range-hover:not(.ant-picker-cell-in-range)::after {
+    border-top: 1px dashed var(--primary-color);
+    border-bottom: 1px dashed var(--primary-color);
+}
+
+tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover:first-child::after, tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-end:first-child::after, .ant-picker-cell-in-view.ant-picker-cell-start.ant-picker-cell-range-hover-edge-start.ant-picker-cell-range-hover-edge-start-near-range::after, .ant-picker-cell-in-view.ant-picker-cell-range-hover-edge-start:not(.ant-picker-cell-range-hover-edge-start-near-range)::after, .ant-picker-cell-in-view.ant-picker-cell-range-hover-start::after {
+    border-left: 1px dashed var(--primary-color);
+}
+
+.ant-picker-year-panel .ant-picker-cell-range-hover-end::after, .ant-picker-quarter-panel .ant-picker-cell-range-hover-end::after, .ant-picker-month-panel .ant-picker-cell-range-hover-end::after,
+tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover:last-child::after, tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::after, .ant-picker-cell-in-view.ant-picker-cell-end.ant-picker-cell-range-hover-edge-end.ant-picker-cell-range-hover-edge-end-near-range::after, .ant-picker-cell-in-view.ant-picker-cell-range-hover-edge-end:not(.ant-picker-cell-range-hover-edge-end-near-range)::after, .ant-picker-cell-in-view.ant-picker-cell-range-hover-end::after {
+    border-right: 1px dashed var(--primary-color);
+}
+
+.ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover::before, .ant-picker-cell-in-view.ant-picker-cell-range-start.ant-picker-cell-range-hover::before, .ant-picker-cell-in-view.ant-picker-cell-range-end.ant-picker-cell-range-hover::before, .ant-picker-cell-in-view.ant-picker-cell-range-start:not(.ant-picker-cell-range-start-single).ant-picker-cell-range-hover-start::before, .ant-picker-cell-in-view.ant-picker-cell-range-end:not(.ant-picker-cell-range-end-single).ant-picker-cell-range-hover-end::before, .ant-picker-panel > :not(.ant-picker-date-panel) .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover-start::before, .ant-picker-panel > :not(.ant-picker-date-panel) .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover-end::before {
+    background: var(--primary-shadow-color);
+}
+
 .ant-picker-time-panel-column > li.ant-picker-time-panel-cell-selected .ant-picker-time-panel-cell-inner {
   background: var(--primary-shadow-color);
 }
@@ -1047,7 +1054,8 @@ Select组件*/
 .ant-tree .ant-tree-node-content-wrapper.ant-tree-node-selected {
   background-color: var(--primary-shadow-color);
 }
-
+/*
+Typography*/
 .ant-typography a {
   color: var(--primary-color);
 }
