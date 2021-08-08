@@ -7,6 +7,7 @@
 .npmignore
 .prettierrc
 .editorconfig
+.env
 tslint.json
 tsconfig.json
 *.log

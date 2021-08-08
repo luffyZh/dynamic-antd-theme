@@ -4,6 +4,8 @@ A simple plugin to dynamic change [ant-design](https://ant.design) theme whether
 
 English | [简体中文](./README_zh_CN.md)
 
+[![Deploy Status](https://circleci.com/gh/zeit/now-desktop.svg?style=shield)](https://dynamic-antd-theme.luffyzh.now.sh/)
+
 > After gzip: 42.7kB
 
 **This project was initially targeted at 'ant-design', that means it's used in the React project. However, the core style was also applicable to 'ant-design-vue' || 'ant-design-angular'. In addition, for the convenience of one-key and auto use, the color-picker was also packaged into the project, resulting in too large a volume of the project. Aiming at this problem, I develope a new minor version —— [mini-dynamic-antd-theme](https://github.com/luffyZh/mini-dynamic-antd-theme).**

@@ -1,7 +1,7 @@
 {
   "name": "dynamic-antd-theme",
   "version": "0.8.5",
-  "description": "Dynamic change ant-design theme by simpley method.",
+  "description": "Dynamic change ant-design theme by simply method.",
   "main": "lib/index.js",
   "types": "index.d.ts",
   "repository": "https://github.com/luffyZh/dynamic-antd-theme.git",

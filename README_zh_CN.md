@@ -2,6 +2,8 @@
 
 [Ant-Design](https://ant.design) 最简单的动态换肤方案。它是一个通用的解决方案，无论你是使用less还是css。
 
+[![Deploy Status](https://circleci.com/gh/zeit/now-desktop.svg?style=shield)](https://dynamic-antd-theme.luffyzh.now.sh/)
+
 > After gzip: 42.7kB
 
 **此项目起初是针对 `ant-design`，也就是针对 React 项目，不过随着使用发现，其实核心样式对于 `ant-design-vue` 也是适用的，并且为了方便使用，项目进行了一键式封装，将 `color-picker` 也封装到了项目中，导致项目体积过大。针对此问题，开发了一个新的小版本 —— [mini-dynamic-antd-theme](https://github.com/luffyZh/mini-dynamic-antd-theme)，感兴趣的可以去使用。**

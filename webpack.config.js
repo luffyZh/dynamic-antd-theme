@@ -3,17 +3,14 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'production', 
-
   entry: {
     index: './index.js'
   },
-
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, "lib"),
     libraryTarget: 'commonjs2'
   },
-
   module: {
     rules: [
       { 
@@ -23,7 +20,6 @@ module.exports = {
       }
     ]
   },
-
   plugins: [
     new CleanWebpackPlugin(['lib'])
   ]
