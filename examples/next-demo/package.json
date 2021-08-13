@@ -14,7 +14,7 @@
     "dynamic-antd-theme": "latest",
     "less": "^3.10.3",
     "moment": "^2.24.0",
-    "next": "^9.1.4",
+    "next": "^11.1.0",
     "null-loader": "^3.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
