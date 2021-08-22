@@ -1,10 +1,11 @@
 ![](./dynamic-antd-theme.png)
 
+[![build-passing](https://img.shields.io/badge/build-passing-brightgreen)](https://dynamic-antd-theme-luffyzh.vercel.app/)
+![release](https://badgen.net/github/release/luffyZh/dynamic-antd-theme/stable)
+
 A simple plugin to dynamic change [ant-design](https://ant.design) theme whether less or css. 
 
 English | [简体中文](./README_zh_CN.md)
-
-[![Deploy Status](https://circleci.com/gh/zeit/now-desktop.svg?style=shield)](https://dynamic-antd-theme.luffyzh.now.sh/)
 
 > After gzip: 42.7kB
 
