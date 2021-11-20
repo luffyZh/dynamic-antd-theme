@@ -1054,6 +1054,9 @@ Select组件*/
 .ant-tree .ant-tree-node-content-wrapper.ant-tree-node-selected {
   background-color: var(--primary-shadow-color);
 }
+.ant-tree.ant-tree-directory .ant-tree-treenode-selected:hover::before, .ant-tree.ant-tree-directory .ant-tree-treenode-selected::before {
+  background: var(--primary-color);
+}
 /*
 Typography*/
 .ant-typography a {

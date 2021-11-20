@@ -58,9 +58,30 @@ const treeData = [
   },
 ];
 
+const { DirectoryTree } = Tree;
+
+const dirTreeData = [
+  {
+    title: 'parent 0',
+    key: '0-0',
+    children: [
+      { title: 'leaf 0-0', key: '0-0-0', isLeaf: true },
+      { title: 'leaf 0-1', key: '0-0-1', isLeaf: true },
+    ],
+  },
+  {
+    title: 'parent 1',
+    key: '0-1',
+    children: [
+      { title: 'leaf 1-0', key: '0-1-0', isLeaf: true },
+      { title: 'leaf 1-1', key: '0-1-1', isLeaf: true },
+    ],
+  },
+];
+
 const { TreeNode } = TreeSelect;
 
-export default function() {
+export default function TreeComp() {
   const [value, setValue] = useState<any>();
   const onChange = (value: any) => {
     console.log(value);
@@ -72,6 +93,14 @@ export default function() {
 
   const onCheck = (checkedKeys: React.Key[], info: any) => {
     console.log('onCheck', checkedKeys, info);
+  };
+
+  const onDirSelect = (keys: React.Key[], info: any) => {
+    console.log('Trigger Select', keys, info);
+  };
+
+  const onExpand = () => {
+    console.log('Trigger Expand');
   };
 
   return (
@@ -114,6 +143,14 @@ export default function() {
           </TreeNode>
         </TreeNode>
       </TreeSelect>
+      <h2>DirectoryTree</h2>
+      <DirectoryTree
+        multiple
+        defaultExpandAll
+        onSelect={onDirSelect}
+        onExpand={onExpand}
+        treeData={dirTreeData}
+      />
     </>
   )
 }
