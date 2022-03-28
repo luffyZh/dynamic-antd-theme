@@ -10,14 +10,7 @@ export interface IComponentProps {
   themeChangeCallback?: (color: ColorInputWithoutInstance) => void
 }
 
-type IColorObj = {
-  primaryColor: ColorInputWithoutInstance;
-  hoverColor: ColorInputWithoutInstance;
-  activeColor: ColorInputWithoutInstance;
-  shadowColor: ColorInputWithoutInstance;
-};
-
-export function changeAntdTheme(colorObj: ColorInputWithoutInstance, customCss?: string): void;
+export function changeAntdTheme(color: ColorInputWithoutInstance, customCss?: string): void;
 
 declare class DynamicAntdTheme extends React.Component<IComponentProps> {
   static defaultProps: IComponentProps;
