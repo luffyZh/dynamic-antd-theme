@@ -4,13 +4,21 @@ import { ColorInputWithoutInstance } from 'tinycolor2';
 
 export interface IComponentProps {
   primaryColor?: ColorInputWithoutInstance;
+  customCss?: string;
   storageName?: string;
+  cascadeLayer?: string;
   style?: CSSStyleDeclaration;
   placement?: 'bottomRight' | 'bottom' | 'bottomLeft' | 'left' | 'topLeft' | 'top' | 'topRight' | 'right',
   themeChangeCallback?: (color: ColorInputWithoutInstance) => void
 }
 
-export function changeAntdTheme(color: ColorInputWithoutInstance, customCss?: string): void;
+interface ChangeAntdThemeOptions {
+  customCss?: string;
+  storageName?: string;
+  cascadeLayer?: string;
+}
+
+export function changeAntdTheme(color: ColorInputWithoutInstance, options?: ChangeAntdThemeOptions): void;
 
 declare class DynamicAntdTheme extends React.Component<IComponentProps> {
   static defaultProps: IComponentProps;

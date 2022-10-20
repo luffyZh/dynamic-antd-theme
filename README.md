@@ -52,6 +52,7 @@ import DynamicAntdTheme from 'dynamic-antd-theme';
 | placement   | String | bottomRight |  change the color-picker position, `bottom, bottomRight, right, topRight, top, topLeft, left, bottomLeft`|
 | themeChangeCallback   | Func | null | you can do something use themeColor when themeColor changed. |
 | customCss   | String | '' | you can define custom css effect any element. |
+| cascadeLayer   | String | undefined | cascade layer to wrap generated css (see [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@layer) for more information on cascade layers). |
 
 ### How to use the primaryColors in customCss?
 
@@ -84,7 +85,7 @@ const customCss = `
 | export       | Description         |
 | ---------- | ------------ |
 | default  | The <DynamicAntdTheme /> component   |
-| changeAntdTheme   | `param: (color, options)`, change the antd theme. The options specific attributes are as follows： - `storageName`: This can be configured to set storageName when not using picker . - `customCss`: custom Css |
+| changeAntdTheme   | `param: (color, options)`, change the antd theme. The options specific attributes are as follows： - `storageName`: This can be configured to set storageName when not using picker. - `customCss`: custom Css. - `cascadeLayer`: specify a cascade layer for the generated css. |
 
 ## 🌰 More Example
 

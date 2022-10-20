@@ -12,7 +12,8 @@ class DynamicAntdTheme extends Component {
     style: PropTypes.object,
     placement: PropTypes.string,
     themeChangeCallback: PropTypes.func,
-    customCss: PropTypes.string
+    customCss: PropTypes.string,
+    cascadeLayer: PropTypes.string
   }
 
   static defaultProps = {
@@ -33,11 +34,11 @@ class DynamicAntdTheme extends Component {
   }
 
   componentDidMount() {
-    const { storageName, themeChangeCallback, customCss } = this.props;
+    const { storageName, themeChangeCallback, customCss, cascadeLayer } = this.props;
     // initial storage color
     const storageColor = window.localStorage.getItem(storageName);
     if (storageColor) {
-      changeAntdTheme(storageColor, { customCss });
+      changeAntdTheme(storageColor, { customCss, cascadeLayer });
       document.getElementById('change_antd_theme_color').style.backgroundColor = storageColor;
       if (themeChangeCallback) {
         themeChangeCallback(storageColor);
@@ -54,10 +55,11 @@ class DynamicAntdTheme extends Component {
   };
 
   handleChange = color => {
+    const { storageName, themeChangeCallback, customCss, cascadeLayer } = this.props;
     this.setState({ color: color.rgb }, () => {
-      changeAntdTheme(color.hex, { customCss: this.props.customCss });
-      window.localStorage.setItem(this.props.storageName, color.hex);
-      this.props.themeChangeCallback && this.props.themeChangeCallback(color.hex);
+      changeAntdTheme(color.hex, { customCss, cascadeLayer });
+      window.localStorage.setItem(storageName, color.hex);
+      themeChangeCallback && themeChangeCallback(color.hex);
     });
   };
 

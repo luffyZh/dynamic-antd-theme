@@ -102,7 +102,7 @@ const generateCustomCss = customCss => {
   return customCss;
 }
 
-const generateStyleHtml = (colorObj, customCss) => {
+const generateStyleHtml = (colorObj, customCss, cascadeLayer) => {
   const {
     activeColor,
     primaryColor,
@@ -118,7 +118,8 @@ const generateStyleHtml = (colorObj, customCss) => {
         --primary-shadow-color: ${shadowColor};
       }
     `;
-    return `${cssVar}\n${cssContent}\n${generateCustomCss(customCss)}`;
+    const css = `${cssVar}\n${cssContent}\n${generateCustomCss(customCss)}`;
+    return cascadeLayer ? `@layer ${cascadeLayer} {${css}}}` : css;
   }
   let IECSSContent = `${cssContent}${generateCustomCss(customCss)}`;
   IECSSContent = IECSSContent.replace(/var\(\-\-primary\-color\)/g, primaryColor);
@@ -136,7 +137,7 @@ const defaultOptions = {
 export function changeAntdTheme (color, options = { ...defaultOptions }) {
   const colorObj = generateThemeColor(color);
   let styleNode = document.getElementById('dynamic_antd_theme_custom_style');
-  const { customCss, storageName } = options;
+  const { customCss, storageName, cascadeLayer } = options;
   // deal ssr
   if (typeof window !== 'undefined') {
     // 这种方式就是不使用 picker 组件进行调用，也要存一份
@@ -146,10 +147,10 @@ export function changeAntdTheme (color, options = { ...defaultOptions }) {
     // avoid repeat insertion
     styleNode = document.createElement('style');
     styleNode.id = 'dynamic_antd_theme_custom_style';
-    styleNode.innerHTML = generateStyleHtml(colorObj, customCss);
+    styleNode.innerHTML = generateStyleHtml(colorObj, customCss, cascadeLayer);
     document.getElementsByTagName('head')[0].appendChild(styleNode);
   } else {
-    styleNode.innerHTML = generateStyleHtml(colorObj, customCss);
+    styleNode.innerHTML = generateStyleHtml(colorObj, customCss, cascadeLayer);
   }
 }
 
