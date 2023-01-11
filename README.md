@@ -7,7 +7,7 @@ A simple plugin to dynamic change [ant-design](https://ant.design) theme whether
 
 English | [简体中文](./README_zh_CN.md)
 
-> After gzip: 42.7kB
+> Ant Design V5 has very convenient's ability to support the dynamic change theme, so the warehouse is no longer maintained, relevant document reference: https://ant.design/docs/react/customize-theme-cn.
 
 **This project was initially targeted at 'ant-design', that means it's used in the React project. However, the core style was also applicable to 'ant-design-vue' || 'ant-design-angular'. In addition, for the convenience of one-key and auto use, the color-picker was also packaged into the project, resulting in too large a volume of the project. Aiming at this problem, I develope a new minor version —— [mini-dynamic-antd-theme](https://github.com/luffyZh/mini-dynamic-antd-theme).**
 
